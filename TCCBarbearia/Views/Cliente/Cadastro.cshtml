@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "CadUser";
+    Layout = "~/Views/Shared/LayoutCadastroUsu.cshtml";
+}
+
+@model TCCBarbearia.Models.Usuario
+@using (Html.BeginForm("CadUser", "Cliente", FormMethod.Post))
+{
+
+    <h1>Cadastre-se</h1>
+
+    <main class="main-formulario">
+
+        <section class="input-section">
+
+            @Html.EditorFor(x => x.username, new
+             {
+             htmlAttributes = new
+                 {
+                     id = "txtUsuario",
+                     senha = "txtUsuario",
+                     type = "text",
+                     @class = "",
+                     placeholder = "Digite o usuario",
+                     required = "required",
+                     maxLength = "30"
+             }
+             })
+            @Html.ValidationMessageFor(x => x.username, "", new { @class = "text-danger" })
+        </section>
+
+        <section class="input-section">
+
+
+            @Html.EditorFor(x => x.senha, new
+       {
+           htmlAttributes = new
+                {
+                    id = "txtSenha",
+                    senha = "txtSenha",
+                    type = "password",
+                    @class = "",
+                    placeholder = "Digite a sua senha",
+                    required = "required",
+                    maxLength = "10"
+           }
+       })
+            @Html.ValidationMessageFor(x => x.senha, "", new { @class = "text-danger" })
+        </section>
+
+
+        <section class="input-section">
+
+
+            @Html.EditorFor(x => x.senha, new
+       {
+           htmlAttributes = new
+                {
+                    id = "txtSenha",
+                    senha = "txtSenha",
+                    type = "password",
+                    @class = "",
+                    placeholder = "Confirmar senha",
+                    required = "required",
+                    maxLength = "10"
+           }
+       })
+            @Html.ValidationMessageFor(x => x.senha, "", new { @class = "text-danger" })
+        </section>
+
+
+        <button type="submit" class="button-entrar">
+            Cadastrar-se
+        </button>
+
+        <p style="text-align:center">Já possui conta? @Html.ActionLink("Entrar", "Login", "Cliente") </p>
+
+    </main>
+
+
+
+}

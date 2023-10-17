@@ -1,0 +1,197 @@
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\TCCBarbearia.dll.config
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\TCCBarbearia.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\TCCBarbearia.pdb
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\csc.exe
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\csc.exe.config
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\csc.rsp
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\csi.exe
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\csi.exe.config
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\csi.rsp
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CodeAnalysis.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CSharp.Core.targets
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.Managed.Core.targets
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.VisualBasic.Core.targets
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.Win32.Primitives.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.AppContext.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Collections.Immutable.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Console.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Diagnostics.StackTrace.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Globalization.Calendars.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.IO.Compression.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.IO.Compression.ZipFile.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.IO.FileSystem.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.IO.FileSystem.Primitives.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Net.Http.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Net.Sockets.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Reflection.Metadata.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Security.Cryptography.Encoding.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Security.Cryptography.Primitives.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Text.Encoding.CodePages.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Threading.Tasks.Extensions.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.ValueTuple.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Xml.ReaderWriter.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Xml.XmlDocument.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Xml.XPath.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Xml.XPath.XDocument.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\vbc.exe
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\vbc.exe.config
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\vbc.rsp
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\VBCSCompiler.exe
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\roslyn\VBCSCompiler.exe.config
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\Antlr3.Runtime.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\Microsoft.Web.Infrastructure.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\MySql.Data.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\MySql.Data.EntityFramework.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\MySql.Web.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\Newtonsoft.Json.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.Helpers.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.Mvc.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.Optimization.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.Razor.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.Deployment.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.Razor.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\WebGrease.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\Google.Protobuf.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\ZstdNet.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\K4os.Compression.LZ4.Streams.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\BouncyCastle.Crypto.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\Ubiety.Dns.Core.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Buffers.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\K4os.Compression.LZ4.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\K4os.Hash.xxHash.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\MySql.Data.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\MySql.Data.EntityFramework.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\MySql.Web.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.Helpers.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.Mvc.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.Optimization.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.Razor.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.Deployment.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.Razor.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\Newtonsoft.Json.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\Antlr3.Runtime.pdb
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.Helpers.resources.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.Mvc.resources.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.Optimization.resources.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.Razor.resources.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.WebPages.resources.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\obj\Debug\TCCBarbearia.csproj.AssemblyReference.cache
+T:\Sella\TCCBarbearia\TCCBarbearia\obj\Debug\TCCBarbearia.csproj.CoreCompileInputs.cache
+T:\Sella\TCCBarbearia\TCCBarbearia\obj\Debug\TCCBarbearia.csproj.CopyComplete
+T:\Sella\TCCBarbearia\TCCBarbearia\obj\Debug\TCCBarbearia.dll
+T:\Sella\TCCBarbearia\TCCBarbearia\obj\Debug\TCCBarbearia.pdb
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\TCCBarbearia.dll.config
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\TCCBarbearia.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\TCCBarbearia.pdb
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\csc.exe
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\csc.exe.config
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\csc.rsp
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\csi.exe
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\csi.exe.config
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\csi.rsp
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.AppContext.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Console.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.IO.Compression.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Net.Http.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.ValueTuple.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\vbc.exe
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\vbc.exe.config
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\vbc.rsp
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\VBCSCompiler.exe
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\Antlr3.Runtime.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\Newtonsoft.Json.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.Helpers.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.Mvc.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.Optimization.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.Razor.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.Razor.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\WebGrease.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\Google.Protobuf.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\ZstdNet.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\BouncyCastle.Crypto.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\Ubiety.Dns.Core.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Buffers.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\K4os.Compression.LZ4.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\K4os.Hash.xxHash.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\MySql.Data.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\MySql.Data.EntityFramework.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\MySql.Web.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.Helpers.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.Mvc.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.Optimization.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.Razor.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\System.Web.WebPages.Razor.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\Newtonsoft.Json.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\Antlr3.Runtime.pdb
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\obj\Debug\TCCBarbearia.csproj.AssemblyReference.cache
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\obj\Debug\TCCBarbearia.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\obj\Debug\TCCBarbearia.csproj.CopyComplete
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\obj\Debug\TCCBarbearia.dll
+C:\Users\Guilherme Sella\Desktop\TCCBarbearia\TCCBarbearia\TCCBarbearia\obj\Debug\TCCBarbearia.pdb
