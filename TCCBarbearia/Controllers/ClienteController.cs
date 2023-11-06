@@ -10,9 +10,9 @@ namespace TCCBarbearia.Controllers
 {
     public class ClienteController : Controller
     {
-        Usuario usu = new Usuario();
         LoginCliente login = new LoginCliente();
         CadastroCliente cadastro = new CadastroCliente();
+        Usuario usu = new Usuario();
         public ActionResult Login()
         {
             return View();
@@ -25,34 +25,38 @@ namespace TCCBarbearia.Controllers
             login.TestarCliente(usuario);
             if (usuario.username != null && usuario.senha != null)
             {
-                Session["usuarioLogado"].ToString();
-                Session["senhaLogado"].ToString();
+                Session["usuarioLogado"] = usuario.username.ToString();
+                Session["senhaLogado"] = usuario.senha.ToString();
 
-                if (usuario.tipo == "admin")
-                {
-                    Session["tipoLogadocli"] = usuario.tipo.ToString();
-                    return RedirectToAction("Cliente", "Home");
-                }
-                else
-                {
-                    Session["tipoLogadoadmin"] = usuario.tipo.ToString();
-                    return RedirectToAction("Admin", "Home");
-                }
-
+                return RedirectToAction("Index", "Home");
             }
+
             else
             {
                 ViewBag.Login = "Usuário não encontrado!";
                 return View();
             }
+        }
 
+        public ActionResult Cadastro()
+        {
+            return View();
         }
 
 
+        [HttpPost]
         public ActionResult Cadastro(Usuario usuario)
         {
             cadastro.CadastroCli(usuario);
-            return View();
+            ViewBag.Message = "Cadastro feito com sucesso!";
+            return RedirectToAction(nameof(Login));
+        }
+
+        public ActionResult Logout()
+        {
+            Session["usuarioLogado"] = null;
+            Session["senhaLogado"] = null;
+            return RedirectToAction("Index", "Home");
         }
         
         //public ActionResult Cadastro(Usuario usuario)

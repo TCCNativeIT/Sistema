@@ -1,4 +1,4 @@
-﻿
+﻿    
 @{
     ViewBag.Title = "Cadastro";
     Layout = "~/Views/Shared/LayoutCadastroUsu.cshtml";
@@ -52,11 +52,12 @@
 
         <section class="input-section">
 
+
             @Html.EditorFor(x => x.confSenha, new
        {
            htmlAttributes = new
                 {
-                    id = "txtconfSenha",
+                    id = "txtSenha",
                     senha = "txtSenha",
                     type = "password",
                     @class = "",

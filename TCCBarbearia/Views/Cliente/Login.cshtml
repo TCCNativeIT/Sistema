@@ -1,64 +1,72 @@
-﻿
-@{
-    ViewBag.Title = "Login";
-    Layout = "~/Views/Shared/LayoutLogin.cshtml";
-}
-
-
-
-@model TCCBarbearia.Models.Usuario
-@using (Html.BeginForm("Login", "Cliente", FormMethod.Post))
+﻿@if (Session["UsuarioLogado"] != null)
 {
+  <h1> Aqui preciso que você crie 4 caixas de texto. 1 com o nome, 1 com o email e 2 com senha e confsenha </h1>
+}
+else
+{
+    {
+        ViewBag.Title = "Login";
+        Layout = "~/Views/Shared/LayoutLogin.cshtml";
+    }
 
-    <h1>Login</h1>
 
-    <main class="main-formulario">
 
-        <section class="input-section">
+    @model TCCBarbearia.Models.Usuario
+    using (Html.BeginForm("Login", "Cliente", FormMethod.Post))
+    {
 
-            @Html.EditorFor(x => x.username, new
-             {
-             htmlAttributes = new
+        <h1>Login</h1>
+
+        <main class="main-formulario">
+
+            <section class="input-section">
+
+                @Html.EditorFor(x => x.username, new
                  {
-                     id = "txtUsuario",
-                     senha = "txtUsuario",
-                     type = "text",
-                     @class = "",
-                     placeholder = "Digite o usuario",
-                     required = "required",
-                     maxLength = "30"
-             }
-             })
-            @Html.ValidationMessageFor(x => x.username, "", new { @class = "text-danger" })
-        </section>
+                 htmlAttributes = new
+                     {
+                         id = "txtUsuario",
+                         senha = "txtUsuario",
+                         type = "text",
+                         @class = "",
+                         placeholder = "Digite o usuario",
+                         required = "required",
+                         maxLength = "30"
+                 }
+                 })
+                @Html.ValidationMessageFor(x => x.username, "", new { @class = "text-danger" })
+            </section>
 
-        <section class="input-section">
-
-
-            @Html.EditorFor(x => x.senha, new
-       {
-           htmlAttributes = new
-                {
-                    id = "txtSenha",
-                    senha = "txtSenha",
-                    type = "password",
-                    @class = "",
-                    placeholder = "Digite a sua senha",
-                    required = "required",
-                    maxLength = "10"
-           }
-       })
-            @Html.ValidationMessageFor(x => x.senha, "", new { @class = "text-danger" })
-        </section>
+            <section class="input-section">
 
 
-        <button type="submit" class="button-entrar">
-            Entrar
-        </button>
+                @Html.EditorFor(x => x.senha, new
+           {
+               htmlAttributes = new
+                    {
+                        id = "txtSenha",
+                        senha = "txtSenha",
+                        type = "password",
+                        @class = "",
+                        placeholder = "Digite a sua senha",
+                        required = "required",
+                        maxLength = "10"
+               }
+           })
+                @Html.ValidationMessageFor(x => x.senha, "", new { @class = "text-danger" })
+            </section>
+            @ViewBag.Login
 
-        <p style="text-align:center">Não possui conta? @Html.ActionLink("Cadastrar-se", "Cadastro", "Cliente") </p>
+            <button type="submit" class="button-entrar">
+                Entrar
+            </button>
 
-    </main>
+            <p style="text-align:center">Não possui conta? @Html.ActionLink("Cadastrar-se", "Cadastro", "Cliente") </p>
+            <p style="text-align:center">Voltar para o menu @Html.ActionLink("Menu", "Index", "Home") </p>
+
+        </main>
+
+    }
+
 
 }
-

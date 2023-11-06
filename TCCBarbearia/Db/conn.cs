@@ -8,7 +8,7 @@ namespace TCCBarbearia.Db
 {
     public class conn
     {
-        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;password=12345678;database=");
+        MySqlConnection con = new MySqlConnection("server=localhost;user=root;password=14154678;database=BdBarbearia");
         public static string msg;
             
         public MySqlConnection ConectarBD()
@@ -19,7 +19,7 @@ namespace TCCBarbearia.Db
             }
             catch (Exception error) 
             {
-                msg = "Erro de conexão";    
+                msg = "Erro de conexão" + error.Message;    
             }
             return con;
         }
@@ -32,7 +32,7 @@ namespace TCCBarbearia.Db
             }
             catch (Exception error)
             {
-                msg = "Erro de conexão";
+                msg = "Erro de conexão" + error.Message;
             }
             return con;
         }

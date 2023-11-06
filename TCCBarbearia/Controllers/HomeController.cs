@@ -15,7 +15,14 @@ namespace TCCBarbearia.Controllers
         {
             return View();
         }
+        public ActionResult Cliente()
+        {
+            return View();
+        }
+        public ActionResult Admin()
+        {
+            return View();
+        }
 
-      
     }
 }

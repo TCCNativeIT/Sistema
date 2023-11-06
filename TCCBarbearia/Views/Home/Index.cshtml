@@ -1,6 +1,8 @@
 ﻿
 @{
     Layout = null;
+
+
 }
 
 <!DOCTYPE html>
@@ -8,25 +10,244 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" type="text/css" href="~/Scripts/HomePage.css" media="screen" />
+    <title>Home - Barbearia Paulista</title>
+    <link rel="stylesheet" type="text/css" href="~/Scripts/HomePageCss - Cópia .css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Scripts/Hamburguer.css" media="screen" />
 </head>
 <body>
-    <header class="header">
-        <h1>Barbearia Paulista</h1>
-        <nav>
-            <a>Agendamento</a>
-            <a>Produtos</a>
-            <a>Sobre</a>
-            <a>Contato</a>
-        </nav>
+    <header class="header ">
+
+        <div>
+
+            <nav class="navbar">
+
+                <div class="nav-logo"></div>
+
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Serviços</a></li>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Contato</a></li>
+                        @if (Session["UsuarioLogado"] != null)
+                        {
+                            <li>Olá, @Session["usuarioLogado"]</li>       
+                            @Html.ActionLink("Conta", "Login", "Cliente");
+                            @Html.ActionLink("Sair", "Logout", "Cliente");
+                        }
+                        else
+                        {
+                        @Html.ActionLink("Login", "Login", "Cliente");
+                        }
+                    </ul>
+
+                </nav>
+
+                <div class="menu-hamburguer">
+                    <input type="checkbox" id="menu-hamburguer" class="input-menu-hamburguer">
+
+                    <label for="menu-hamburguer">
+                        <div class="menu">
+                            <span class="hamburguer"></span>
+                        </div>
+                    </label>
+                </div>
+
+            </nav>
+
+        </div>
+
     </header>
 
-    <figure class="banner">
 
-    </figure>
+    @*MOBILE*@
+
+    <nav class="navMobile">
+
+        <h2>Menu</h2>
+
+        <ul>
+            <li><a onclick="fecharNav()" href="#">Home</a></li>
+            <li><a onclick="fecharNav()" href="">Sobre nós</a></li>
+            <li><a onclick="fecharNav()" href="">Agendamento</a></li>
+            <li><a onclick="fecharNav()" href="x">Serviços</a></li>
+            <li><a onclick="fecharNav()" href="">Produtos</a></li>
+            <li><a onclick="fecharNav()" href="">Contato</a></li>
+        </ul>
+
+    </nav>
+
+    @*BANNER*@
+
+    <section class="banner" id="banner">
+
+        <article class="banner-imagem">
+        
+            <div class="banner-logo">
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+
+    @*SESSÃO NOSSOS SERVIÇOS*@
+
+
+
+        <section class="section-servicos">
+
+            <h1 class="title-servico">Nossos serviços</h1>
+
+            <main class="cards-servicos">
+                    <div class="card-servico">
+                        <img src="~/imgs/icons/tesoura.png" />
+                        <div>
+                            <h1>Corte</h1>
+                            <p>Às vezes nem é tristeza, sabia? Você só precisa ficar na régua!</p>
+                            <p class="preco">R$45,00</p>
+                        </div>
+                    </div>
+
+                    <div class="card-servico">
+                        <img src="~/imgs/icons/barba.png" />
+                        <div>
+                            <h1>Barba</h1>
+                            <p>Um homem com sua barba bem cuidada não quer guerra com ninguém.</p>
+                            <p class="preco">R$45,00</p>
+                        </div>
+                    </div>
+
+                    <div class="card-servico">
+                        <img src="~/imgs/icons/navalha.png" />
+                        <div>
+                            <h1>Corte e Barba</h1>
+                            <p>Às vezes nem é tristeza, sabia? Você só precisa ficar na régua!</p>
+                            <p class="preco">R$45,00</p>
+                        </div>
+                    </div>
+            </main>
+
+            @Html.ActionLink("Agendar agora", "FormAgendamento", "Agendamento" ,null, new { @class = "agendar-button"})
+
+        </section>
+
+
+    @*SESSÃO SOBRE-NOS*@
+
+
+    <section class="section-sobre-nos">
+        <main>
+            <div>
+                <h1>Quem somos?</h1>
+                <p>
+                    Bem-vindo à Barbearia Paulista, onde a tradição e a modernidade encontram-se para proporcionar uma experiência singular em cuidados masculinos.
+
+                    Fundada com uma paixão profunda por tradição e excelência, a Barbearia Paulista não é apenas um lugar onde os homens vêm para um corte de cabelo ou um barbear. Aqui, celebramos um legado que atravessa gerações, onde as técnicas clássicas de barbearia se fundem com as tendências contemporâneas.
+
+                    Nossa história é enraizada no coração de São Paulo, uma cidade que pulsa inovação, cultura e sofisticação. E é dessa mistura vibrante que extraímos nossa inspiração diária. Desde o nosso início, nos empenhamos em criar um santuário para o homem moderno, um espaço onde ele pode relaxar, rejuvenescer e renovar sua confiança.
+                </p>
+            </div>
+        </main>
+        <figure>
+
+        </figure>
+    </section>
+
+
+
+    @*SECTION ONDE ESTAMOS*@
+
+
+
+            <section class="section-localizacao">
+
+                    <h1 class="title-localizacao">Onde estamos?</h1>
+
+                    <div class="div-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.053690563623!2d-46.6513610569813!3d-23.566515099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b8c06ff15d%3A0x733d66194814e334!2sAv.%20Paulista%2C%20742%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1698253785731!5m2!1spt-BR!2sbr"
+                                width="1000px"
+                                height="600px"
+                                frameborder="0">
+                        </iframe>
+                    </div>
+
+            </section>
+
+
+
+
+    @*FOOTER*@
+
+
+    <footer>
+
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Serviços</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Contato</a></li>
+                <li><a href="~/Views/Cliente/Login.cshtml">Login</a></li>
+                <li><a href="~/Views/Cliente/Cadastro.cshtml">Cadastrar</a></li>
+            </ul>
+            <div class="nav-redes-sociais">
+                <img src="~/imgs/icons/instagram.png"/>
+                <img src="~/imgs/icons/whatsapp.png"/>
+            </div>
+        </nav> 
+
+        <div class="footer-hr"></div>
+
+
+        <figure>
+            <div class="logo-footer"></div>
+            
+        </figure>
+
+       
+
+
+    </footer>
 
 
 
 </body>
+
+
 </html>
+
+    <script>
+
+        const header = document.querySelector('.header')
+
+        window.addEventListener("scroll", () => {
+
+            header.classList.toggle('scroll', window.scrollY > 7)
+        });
+
+        const menuHambuguer = document.querySelector("#menu-hamburguer")
+
+        menuHambuguer.addEventListener("click", () => {
+
+            let nav = document.querySelector(".navMobile")
+            menuHambuguer.classList.toggle("hamburguerActive")
+            nav.classList.toggle('active')
+        })
+
+        function fecharNav() {
+            let nav = document.querySelector(".navMobile")
+            let input = document.querySelector("#menu-hamburguer")
+            input.checked = false;
+            nav.classList.toggle('active')
+        }
+
+        const fecharMobile = () => {
+            let nav = document.querySelector(".navMobile")
+            nav.classList.remove('active')
+            removerFundo()
+        }
+
+    </script>

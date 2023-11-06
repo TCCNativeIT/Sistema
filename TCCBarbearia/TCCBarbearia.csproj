@@ -120,17 +120,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acoes\AgendamentoCliente.cs" />
     <Compile Include="Acoes\CadastroCliente.cs" />
     <Compile Include="Acoes\LoginCliente.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AgendamentoController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Db\conn.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Agendamento.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -154,7 +157,17 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="imgs\reforma-de-barbearia.jpg" />
+    <Content Include="imgs\BarbeariaLogo.png" />
+    <Content Include="imgs\bigodepreto.png" />
+    <Content Include="imgs\c261224f-d615-4aa5-b6e4-e4b666a3cf36.jpg" />
+    <Content Include="imgs\icons\barba.png" />
+    <Content Include="imgs\icons\instagram.png" />
+    <Content Include="imgs\icons\navalha.png" />
+    <Content Include="imgs\icons\tesoura.png" />
+    <Content Include="imgs\icons\whatsapp.png" />
+    <Content Include="imgs\Paulista-removebg-preview.png" />
+    <Content Include="imgs\bigodebranco.png" />
+    <Content Include="imgs\sobre-nos.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -162,6 +175,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\HomePageCss - Cópia .css" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -174,7 +188,8 @@
     <Content Include="Scripts\LoginPage.css" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\CadastroPage.css" />
-    <Content Include="Scripts\HomePage.css" />
+    <Content Include="Scripts\Hamburguer.css" />
+    <Content Include="Scripts\FormAgendamento.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -191,6 +206,13 @@
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Agendamento\FormAgendamento.cshtml" />
+    <Content Include="Views\Shared\_LayoutFormAgendamento.cshtml" />
+    <Content Include="Views\Home\Cliente.cshtml" />
+    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\Home\Teste.cshtml" />
+    <Content Include="Views\Cliente\Teste.cshtml" />
+    <Content Include="Views\Agendamento\Concluido.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

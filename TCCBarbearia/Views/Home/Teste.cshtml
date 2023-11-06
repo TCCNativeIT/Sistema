@@ -52,11 +52,12 @@
 
         <section class="input-section">
 
-            @Html.EditorFor(x => x.confSenha, new
+
+            @Html.EditorFor(x => x.senha, new
        {
            htmlAttributes = new
                 {
-                    id = "txtconfSenha",
+                    id = "txtSenha",
                     senha = "txtSenha",
                     type = "password",
                     @class = "",
@@ -65,7 +66,7 @@
                     maxLength = "10"
            }
        })
-            @Html.ValidationMessageFor(x => x.confSenha, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(x => x.senha, "", new { @class = "text-danger" })
         </section>
 
 
