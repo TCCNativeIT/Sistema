@@ -90,7 +90,7 @@ namespace TCCBarbearia.Controllers
         {
             PegarHorariosMarcadosUsuario horarios = new PegarHorariosMarcadosUsuario();
             List<Agendamento> horariosMarcadosConta = horarios.PegarTodosHorariosUsuarioLogado(id);
-
+            ViewBag.HorariosMarcadosConta = horariosMarcadosConta;
             return View();
         }
 

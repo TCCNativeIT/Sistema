@@ -230,6 +230,8 @@
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Admin\AdminClientesCadastrados.cshtml" />
     <Content Include="Views\Agendamento\Formes.cshtml" />
+    <Content Include="Views\Cliente\AgendamentosConta.cshtml" />
+    <Content Include="Views\Cliente\Conta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

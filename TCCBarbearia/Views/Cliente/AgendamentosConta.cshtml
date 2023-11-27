@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AgendamentosConta</title>
+</head>
+<body>
+    <div>
+        @if (ViewBag.HorariosMarcadosConta != null)
+        {
+            foreach (var horarioMarcado in ViewBag.HorariosMarcadosConta)
+            {
+
+                <div>
+                    <h1>@horarioMarcado.nome_usu</h1>
+                    <h1>@horarioMarcado.servico</h1>
+                    <h1>@horarioMarcado.preco</h1>
+                    <h1>@horarioMarcado.data</h1>
+                    <h1>@horarioMarcado.horas</h1>
+
+                </div>
+
+            }
+        }
+    </div>
+</body>
+</html>
