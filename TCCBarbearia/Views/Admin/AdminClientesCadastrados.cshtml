@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "AdminClientesCadastrados";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Clientes</h1>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Tel</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (ViewBag.ListaClientesCadastrados != null)
+            {
+                foreach (var usuario in ViewBag.ListaClientesCadastrados)
+                {
+
+                    <tr>
+                        <td>@usuario.cod_usu</td>
+                        <td>@usuario.nome_usu</td>
+                        <td>@usuario.email_usu</td>
+                        <td>@usuario.tel_usu</td>
+                    </tr>
+
+                }
+            }
+        </tbody>
+    </table>
+
+
+
+
+

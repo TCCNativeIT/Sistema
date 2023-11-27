@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Cadastro";
     Layout = "~/Views/Shared/LayoutCadastroUsu.cshtml";
 }
@@ -14,21 +13,61 @@
 
         <section class="input-section">
 
-            @Html.EditorFor(x => x.username, new
+            @Html.EditorFor(x => x.nome_usu, new
              {
              htmlAttributes = new
                  {
-                     id = "txtUsuario",
-                     senha = "txtUsuario",
+                     id = "txtNome",
+                     senha = "txtNome",
                      type = "text",
                      @class = "",
-                     placeholder = "Digite o usuario",
+                     placeholder = "Digite o seu nome completo",
                      required = "required",
-                     maxLength = "30"
+                     maxLength = "50"
              }
              })
-            @Html.ValidationMessageFor(x => x.username, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(x => x.nome_usu, "", new { @class = "text-danger" })
         </section>
+
+        <section class="input-section">
+
+
+            @Html.EditorFor(x => x.email_usu, new
+       {
+           htmlAttributes = new
+                {
+                    id = "txtEmail",
+                    senha = "txtEmail",
+                    type = "text",
+                    @class = "",
+                    placeholder = "Digite seu email",
+                    required = "required",
+                    maxLength = "50"
+           }
+       })
+            @Html.ValidationMessageFor(x => x.email_usu, "", new { @class = "text-danger" })
+        </section>
+
+        <section class="input-section">
+
+
+            @Html.EditorFor(x => x.tel_usu, new
+       {
+           htmlAttributes = new
+                {
+                    id = "txtTel",
+                    senha = "txtTel",
+                    type = "number",
+                    @class = "",
+                    placeholder = "Digite seu melhor número",
+                    required = "required",
+                    maxLength = "11"
+           }
+       })
+            @Html.ValidationMessageFor(x => x.tel_usu, "", new { @class = "text-danger" })
+        </section>
+
+        <section class="input-section"
 
         <section class="input-section">
 
@@ -56,7 +95,7 @@
        {
            htmlAttributes = new
                 {
-                    id = "txtconfSenha",
+                    id = "txtConfSenha",
                     senha = "txtSenha",
                     type = "password",
                     @class = "",

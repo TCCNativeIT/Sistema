@@ -1,0 +1,74 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminHome</title>
+    <link rel="stylesheet" type="text/css" href="~/Scripts/AdminHomeStyles - Cópia .css" media="screen" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+
+    <section class="sidebar">
+
+
+        <img src="~/imgs/BarbeariaLogo.png" />
+
+        <ul>
+
+            <a href="@Url.Action("AdminHome", "Admin")">
+
+            <li>
+                <span class="material-symbols-outlined">
+                    pending_actions
+                </span>
+                Agendamentos
+            </li>
+            </a>
+
+            <a href="@Url.Action("AdminClientesCadastrados", "Admin")">
+            <li>
+                <span class="material-symbols-outlined">
+                    group
+                </span>
+                Clientes
+            </li>
+            </a>
+
+            <a href="@Url.Action("", "Admin")">
+                <li>
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    Sair
+                </li>   
+            </a>
+
+        </ul>
+
+    </section>
+
+
+    <main class="main">
+
+        <header>
+            <h3>Bem vindo Admin!</h3>
+        </header>
+
+        <section class="section-main">
+
+            @RenderBody()
+
+
+        </section>
+
+    </main>
+
+</body>
+</html>

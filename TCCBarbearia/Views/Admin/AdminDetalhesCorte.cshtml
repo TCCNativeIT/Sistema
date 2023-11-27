@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "AdminClientesCadastrados";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminDetalhesCorte</title>
+</head>
+<body>
+    <div>
+        @foreach (var horario in ViewBag.HorarioMarcado)
+        {
+
+                    <h1>@horario.nome_usu</h1>
+                    <h3>@horario.servico</h3>
+                    <h3>@horario.email_usu</h3>
+                    <h3>@horario.tel_usu</h3>
+                    <h3>@horario.preco</h3>
+                    <h3>@horario.horario</h3>
+
+                
+
+        }
+    </div>
+</body>
+</html>

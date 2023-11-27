@@ -14,11 +14,13 @@ namespace TCCBarbearia.Acoes
 
         public void CadastroCli(Usuario usu)
         {
-            MySqlCommand cmd = new MySqlCommand("insert into tbl_Login(usuario,senha)" +
-                "values(@usuario,@senha )", conn.ConectarBD());
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO tbl_Login(senha,nome_usu,tel_usu,email_usu)" +
+                "VALUES(@senha,@nome_usu,@tel_usu,@email_usu)", conn.ConectarBD());
 
-            cmd.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = usu.username;
             cmd.Parameters.Add("@senha", MySqlDbType.VarChar).Value = usu.senha;
+            cmd.Parameters.Add("@nome_usu", MySqlDbType.VarChar).Value = usu.nome_usu;
+            cmd.Parameters.Add("@tel_usu", MySqlDbType.VarChar).Value = usu.tel_usu;
+            cmd.Parameters.Add("@email_usu", MySqlDbType.VarChar).Value = usu.email_usu;
 
             cmd.ExecuteNonQuery();
             conn.DesconectarBD();

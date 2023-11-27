@@ -1,5 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&family=Noto+Serif+Display:wght@300&family=PT+Serif&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,11 +8,14 @@
 }
 
 body {
-    font-family: sans-serif;
-    
+    font-family: 'Open Sans', sans-serif;
 }
 
-                                            /*HEADER*/
+html{
+    scroll-behavior:smooth;
+}
+
+                                       /*HEADER*/
 
 .header {
     transition: 0.5s ease-in-out;
@@ -62,17 +65,6 @@ body {
     color:white;
 }
 
-.navbar a {
-    color:white;
-    font-weight: 500;
-    font-size: 2.5rem;
-    text-decoration: none;
-    transition: 0.4s;
-}
-
-.navbar a:hover {
-    text-decoration:underline;
-}
 
 .navbar ul {
     gap: 30px;
@@ -82,12 +74,16 @@ body {
 }
 
 .navbar ul li a {
+    color:white;
     font-weight: 500;
     text-decoration: none;
     font-size: 1.2rem;
     transition: 0.4s;
 }
 
+.navbar ul li a:hover {
+    text-decoration:underline;
+}
 
 .header.scroll .navbar .nav-logo {
     background: no-repeat center/cover url(../imgs/bigodepreto.png);
@@ -107,13 +103,151 @@ body {
     filter: drop-shadow(1px 1px 1px #222222ec);
 }
 
+.div-login{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.div-login p{
+    position:relative;
+    padding:5px 0;
+}
+
+.div-login p:before {
+    background-color:black;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.div-login p:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+    .div-login .material-symbols-outlined {
+        color: white;
+        font-variation-settings: 'FILL' 0, 'wght' 800, 'GRAD' 0, 'opsz' 24
+    }
+
+.btn-login {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.header.scroll .btn-login{
+    color:black;
+}
+    .header.scroll .btn-login .material-symbols-outlined {
+        color: black;
+    }
+
+
+.header.scroll .div-logado .material-symbols-outlined {
+    color: black;
+}
+
+.div-logado{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+
+    .div-logado h3{
+        color:white;
+        font-weight:400;
+    }
+
+.header.scroll .div-logado h3{
+    color:black;
+}
+
+.div-logado .material-symbols-outlined {
+    color: white;
+    font-variation-settings: 'FILL' 0, 'wght' 800, 'GRAD' 0, 'opsz' 24
+
+}
+
+                                /*MODAL USUARIO*/
+
+.modal-usuario {
+    width: 350px;
+    padding: 5px 0px;
+    background-color: #161415;
+    position: absolute;
+    display: none;
+    z-index: 20;
+    right: 12%;
+    top: 10vh;
+    border-radius:5px;
+}
+.modal-usuario ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 10px;
+    list-style: none;
+        
+    text-decoration: none;
+}
+.modal-usuario ul li {
+    padding: 10px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.modal-usuario ul li:hover {
+    background-color: rgba(255, 255, 255, 0.305);
+}
+
+.modal-usuario ul li span{
+    color:white;
+}
+
+.modal-usuario ul a{
+    color:white;
+    text-decoration:none;
+}
+
+
+.modal-usuario ul .hr {
+    width: 95%;
+    align-self:center;
+    height: 0.5px;
+    background-color: rgba(216, 216, 216, 0.678);
+}
+
+.modal-active{
+    display:block;
+}
+
+
+
+
 
                                                 /*BANNER*/
-
-
 .banner {
     display: flex;
-    
     height: 100vh;
 }
 
@@ -124,7 +258,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: no-repeat center url(../imgs/c261224f-d615-4aa5-b6e4-e4b666a3cf36.jpg);
+    background: no-repeat center url(../imgs/bannerTeste2.jpg);
     padding: 0 15%;
 }
 
@@ -317,19 +451,20 @@ footer {
 
 }
 
-
-    footer .footer-hr {
-        width: 95%;
-        height: 0.1px;
-        background-color: white;
-    }
+footer .footer-hr {
+    width: 100%;
+    height: 0.5px;
+    background-color: white;
+}
 
 footer nav{
+    width:100%;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:100px;
 }
+
 
 footer nav ul {
     display: flex;
@@ -337,6 +472,12 @@ footer nav ul {
     gap: 25px;
     list-style:none;
     padding:2vh 0 ;
+}
+@media screen and (max-width:620px){
+   
+    footer nav ul{
+        flex-direction:column;
+    }
 }
 
 footer nav ul li a {

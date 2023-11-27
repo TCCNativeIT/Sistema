@@ -1,0 +1,306 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&family=Noto+Serif+Display:wght@300&family=PT+Serif&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    
+}
+
+                                            /*HEADER*/
+
+.header {
+    transition: 0.5s ease-in-out;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+}
+
+.header.scroll {
+    background-color: white;
+}
+
+.header .navbar #logo {
+    color: rgb(255, 128, 0);
+}
+
+.header.scroll .navbar h1 {
+    color: black;
+}
+
+.header.scroll .navbar ul li a {
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    align-items: center;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.navbar .nav-logo {
+    background: no-repeat center/cover url(../imgs/bigodebranco.png);
+    height:100px;
+    width:100px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar h1{
+    color:white;
+}
+
+.navbar a {
+    color:white;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.navbar a:hover {
+    text-decoration:underline;
+}
+
+.navbar ul {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li a {
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.4s;
+}
+
+
+.header.scroll .navbar .nav-logo {
+    background: no-repeat center/cover url(../imgs/bigodepreto.png);
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-icons img {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    -webkit-filter: drop-shadow(3px 4px 3px #222);
+    filter: drop-shadow(1px 1px 1px #222222ec);
+}
+
+
+                                                /*BANNER*/
+
+
+.banner {
+    display: flex;
+    
+    height: 100vh;
+}
+
+.banner .banner-imagem {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: no-repeat center url(../imgs/banner.jpg);
+    padding: 0 15%;
+}
+
+
+
+.banner {
+    display: flex;
+    height: 100vh;
+}
+
+.banner-imagem{
+    
+}
+
+.banner-logo {
+    width:90vw;
+    height:50vh;
+    background: no-repeat center url(../imgs/Paulista-removebg-preview.png);
+}
+
+@media screen and (max-width:820px) {
+    .banner .banner-imagem h1 {
+        font-size: 2.3em;
+    }
+}
+
+
+                                /*SECTION NOSSOS SERVIÇOS*/
+
+.section-servicos{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:30vh 0;
+    gap:150px;
+    
+}
+
+.title-servico {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Inria Serif', serif;
+    border-bottom:5px solid black;
+}
+
+.cards-servicos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.card-servico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: #ebebeb;
+    gap: 15px;
+    max-width: 500px;
+    padding: 17vh 65px ;
+}
+
+.card-servico img{
+    height:90px;
+    width:90px;
+}
+
+.card-servico h1 {
+    font-size: 2rem;
+    padding-bottom: 10px;
+    font-family: 'Inria Serif', serif;
+}
+
+.card-servico p{
+    font-size:1.2rem;
+}
+
+.card-servico .preco {
+    font-size: 1.7rem;
+    font-weight:bold;
+    padding-top: 20px ;
+    font-family: 'Inria Serif', serif;
+}
+
+
+
+                                    /*SECTION SOBRE NOS*/
+
+.section-sobre-nos{
+    width:100%;
+    height:80vh;
+    display:flex;
+}
+
+.section-sobre-nos main {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #161415;
+    padding: 2vh 50px;
+}
+
+.section-sobre-nos main div{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+.section-sobre-nos main h1 {
+    font-family: 'Inria Serif', serif;
+    font-size: 45px;
+}
+
+.section-sobre-nos main p {
+    font-size:18px;
+    font-weight:400;
+}
+
+.section-sobre-nos figure {
+    width: 60%;
+    background: no-repeat center url(../imgs/sobre-nos.jpg);
+}
+
+
+@media screen and (max-width:1024px) {
+    .section-sobre-nos main{
+        width:100%;
+    }
+    .section-sobre-nos figure{
+        display:none;
+    }
+   
+}
+
+
+                    /*SECTION ONDE ESTAMOS*/
+
+.section-localizacao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30vh 0;
+    gap: 150px;
+}
+
+.title-localizacao {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Inria Serif', serif;
+    border-bottom: 5px solid black;
+}
+
+
+
+
+
+                    /*FOOTER*/
+footer {
+    width: 100%;
+    background-color: #141414;
+    padding:5vh 50px;
+    display:flex;
+}
+
+.logo-footer {
+    height:250px;
+    width:250px;
+    background: no-repeat center/cover url(../imgs/Paulista-removebg-preview.png);
+}

@@ -1,15 +1,17 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using TCCBarbearia.Acoes;
+using TCCBarbearia.Db;
 using TCCBarbearia.Models;
 
 namespace TCCBarbearia.Controllers
 {
     public class ClienteController : Controller
     {
+
+        conn conn = new conn();
         LoginCliente login = new LoginCliente();
         CadastroCliente cadastro = new CadastroCliente();
         Usuario usu = new Usuario();
@@ -23,14 +25,32 @@ namespace TCCBarbearia.Controllers
         public ActionResult Login(Usuario usuario)
         {
             login.TestarCliente(usuario);
-            if (usuario.username != null && usuario.senha != null)
+
+
+
+            if (usuario.nome_usu == "Admin" && usuario.email_usu == "admin@gmail.com" && usuario.senha == "12345")
             {
-                Session["usuarioLogado"] = usuario.username.ToString();
+                Session["emailLogado"] = usuario.email_usu.ToString();
                 Session["senhaLogado"] = usuario.senha.ToString();
+                Session["nomeLogado"] = usuario.nome_usu.ToString();
+                Session["senhaLogado"] = usuario.senha.ToString();
+                Session["codLogado"] = usuario.cod_usu.ToString();
+                Session["telLogado"] = usuario.tel_usu.ToString();
+
+                return RedirectToAction("AdminHome", "Admin");
+            }
+            else if (usuario.email_usu != null && usuario.senha != null)
+            {
+                Session["emailLogado"] = usuario.email_usu.ToString();
+                Session["senhaLogado"] = usuario.senha.ToString();
+                Session["nomeLogado"] = usuario.nome_usu.ToString();
+                Session["senhaLogado"] = usuario.senha.ToString();
+                Session["codLogado"] = usuario.cod_usu.ToString();
+                Session["telLogado"] = usuario.tel_usu.ToString();
+
 
                 return RedirectToAction("Index", "Home");
             }
-
             else
             {
                 ViewBag.Login = "Usuário não encontrado!";
@@ -54,17 +74,26 @@ namespace TCCBarbearia.Controllers
 
         public ActionResult Logout()
         {
-            Session["usuarioLogado"] = null;
+            Session["emailLogado"] = null;
             Session["senhaLogado"] = null;
             return RedirectToAction("Index", "Home");
         }
-        
-        //public ActionResult Cadastro(Usuario usuario)
-        //{
 
-        //    return View();
-        //}
 
-    
-}
+        public ActionResult Conta()
+        {
+
+            return View();
+        }
+
+        public ActionResult AgendamentosConta(int id)
+        {
+            PegarHorariosMarcadosUsuario horarios = new PegarHorariosMarcadosUsuario();
+            List<Agendamento> horariosMarcadosConta = horarios.PegarTodosHorariosUsuarioLogado(id);
+
+            return View();
+        }
+
+
+    }
 }

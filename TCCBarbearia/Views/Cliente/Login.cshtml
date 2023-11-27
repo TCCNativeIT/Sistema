@@ -1,4 +1,4 @@
-﻿@if (Session["UsuarioLogado"] != null)
+﻿@if (Session["emailLogado"] != null)
 {
   <h1> Aqui preciso que você crie 4 caixas de texto. 1 com o nome, 1 com o email e 2 com senha e confsenha </h1>
 }
@@ -21,20 +21,20 @@ else
 
             <section class="input-section">
 
-                @Html.EditorFor(x => x.username, new
+                @Html.EditorFor(x => x.email_usu, new
                  {
                  htmlAttributes = new
                      {
-                         id = "txtUsuario",
-                         senha = "txtUsuario",
+                         id = "txtEmail",
+                         senha = "txtEmail",
                          type = "text",
                          @class = "",
-                         placeholder = "Digite o usuario",
+                         placeholder = "Digite o email",
                          required = "required",
-                         maxLength = "30"
+                         maxLength = "50"
                  }
                  })
-                @Html.ValidationMessageFor(x => x.username, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(x => x.email_usu, "", new { @class = "text-danger" })
             </section>
 
             <section class="input-section">

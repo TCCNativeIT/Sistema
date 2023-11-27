@@ -46,6 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
     <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data.EntityFramework, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="MySql.Web, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -122,10 +123,14 @@
   <ItemGroup>
     <Compile Include="Acoes\AgendamentoCliente.cs" />
     <Compile Include="Acoes\CadastroCliente.cs" />
+    <Compile Include="Acoes\Carrinho.cs" />
     <Compile Include="Acoes\LoginCliente.cs" />
+    <Compile Include="Acoes\PegarHorariosMarcadosAdm.cs" />
+    <Compile Include="Acoes\PegarHorariosMarcadosUsuario.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AgendamentoController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -134,6 +139,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Agendamento.cs" />
+    <Compile Include="Models\HorariosMarcados.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -154,9 +160,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\jquery.datetimepicker.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="imgs\bannerTeste.jpg" />
+    <Content Include="imgs\bannerTeste2.jpg" />
     <Content Include="imgs\BarbeariaLogo.png" />
     <Content Include="imgs\bigodepreto.png" />
     <Content Include="imgs\c261224f-d615-4aa5-b6e4-e4b666a3cf36.jpg" />
@@ -167,7 +176,10 @@
     <Content Include="imgs\icons\whatsapp.png" />
     <Content Include="imgs\Paulista-removebg-preview.png" />
     <Content Include="imgs\bigodebranco.png" />
+    <Content Include="imgs\imgFormAgendamento.jpg" />
     <Content Include="imgs\sobre-nos.jpg" />
+    <Content Include="Scripts\AdminHomeStyles - Cópia .css" />
+    <Content Include="Scripts\AdminHomeStyles.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -175,12 +187,15 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Scripts\HomePageCss - Cópia .css" />
+    <Content Include="Scripts\FormAgendamentoStyle.css" />
+    <Content Include="Scripts\Hamburguer - Cópia .css" />
+    <Content Include="Scripts\HomePageCss.css" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.datetimepicker.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -188,7 +203,6 @@
     <Content Include="Scripts\LoginPage.css" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\CadastroPage.css" />
-    <Content Include="Scripts\Hamburguer.css" />
     <Content Include="Scripts\FormAgendamento.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -208,11 +222,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Agendamento\FormAgendamento.cshtml" />
     <Content Include="Views\Shared\_LayoutFormAgendamento.cshtml" />
-    <Content Include="Views\Home\Cliente.cshtml" />
-    <Content Include="Views\Home\Admin.cshtml" />
     <Content Include="Views\Home\Teste.cshtml" />
     <Content Include="Views\Cliente\Teste.cshtml" />
     <Content Include="Views\Agendamento\Concluido.cshtml" />
+    <Content Include="Views\Admin\AdminHome.cshtml" />
+    <Content Include="Views\Admin\AdminDetalhesCorte.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admin\AdminClientesCadastrados.cshtml" />
+    <Content Include="Views\Agendamento\Formes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

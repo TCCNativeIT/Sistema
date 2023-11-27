@@ -1,0 +1,113 @@
+﻿* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+    body main {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+        body main .div-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            body main .div-logo img {
+                height: 300px;
+            }
+
+            body main .div-logo h1 {
+                position: relative;
+                bottom: 60px;
+            }
+
+        body main form {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            width: 90vw;
+            max-width: 600px;
+        }
+
+            body main form div {
+                display: flex;
+                flex-direction: column;
+            }
+
+                body main form div .div-radios {
+                    display: flex;
+                    align-items: start;
+                    gap: 15px;
+                    flex-direction: column;
+                    padding: 20px 0 0 0;
+                }
+
+                    body main form div .div-radios div {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        gap: 10px;
+                    }
+
+                        body main form div .div-radios div input {
+                            height: 20px;
+                            width: 20px;
+                        }
+
+
+                body main form div label {
+                    font-size: 16px;
+                    padding-bottom: 5px;
+                }
+
+        body main div input {
+            border: none;
+            outline: none;
+            padding: 5px 0;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(212, 212, 212, 0.486);
+        }
+
+
+.btn-agendar {
+    padding: 18px 0;
+    border: none;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.849);
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+/* IMAGEM */
+
+figure {
+    width: 90vw;
+    max-width: 500px;
+    height: 75vh;
+    background: no-repeat center url(../imgs/imgFormAgendamento.jpg);
+    background-size: cover;
+}
+
+
+@media screen and (max-width:1240px) {
+    figure {
+        display: none;
+    }
+}

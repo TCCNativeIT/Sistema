@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "AdminHome";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<h1>Agendamentos</h1>
+
+<div class="agendamentos">
+
+
+
+
+    @if (ViewBag.HorariosList != null)
+    {
+        foreach (var horario in ViewBag.HorariosList)
+        {
+
+            <div class="card-agendamento">
+
+                <div class="card-nome-servico">
+                    <h1>@horario.nome_usu</h1>
+                    <h3>@horario.servico</h3>
+
+                </div>
+
+                <div class="card-detalhes">
+
+
+
+                    @Html.ActionLink("Detalhes", "AdminDetalhesCorte", "Admin", new { idAgendamento = horario.cod_agendamento, @class = "card-button-detalhes" }, null)
+
+
+                    <div class="horario-preco">
+
+                        <h3>R$@horario.preco</h3>
+                        <h3>@horario.horario</h3>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        }
+    }
+    else
+    {
+        <h1>Nenhum Horário marcado!</h1>
+    }
+
+
+</div>
+

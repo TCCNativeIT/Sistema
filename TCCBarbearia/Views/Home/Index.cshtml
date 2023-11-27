@@ -11,8 +11,9 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Home - Barbearia Paulista</title>
-    <link rel="stylesheet" type="text/css" href="~/Scripts/HomePageCss - Cópia .css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="~/Scripts/Hamburguer.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Scripts/HomePageCss.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Scripts/Hamburguer - Cópia .css" media="screen" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <header class="header ">
@@ -21,27 +22,41 @@
 
             <nav class="navbar">
 
-                <div class="nav-logo"></div>
 
                 <nav>
+                        <div class="nav-logo"></div>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Serviços</a></li>
-                        <li><a href="">Sobre</a></li>
-                        <li><a href="">Contato</a></li>
-                        @if (Session["UsuarioLogado"] != null)
-                        {
-                            <li>Olá, @Session["usuarioLogado"]</li>       
-                            @Html.ActionLink("Conta", "Login", "Cliente");
-                            @Html.ActionLink("Sair", "Logout", "Cliente");
-                        }
-                        else
-                        {
-                        @Html.ActionLink("Login", "Login", "Cliente");
-                        }
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#localizacao">Localização</a></li>
                     </ul>
 
                 </nav>
+
+                @if (Session["emailLogado"] != null)
+{
+                    <div class="div-logado" onmouseover="showModal()">
+                        <span class="material-symbols-outlined">
+                            account_circle
+                        </span>
+                        <h3 class="text-logado"  >Olá, @Session["nomeLogado"]!</h3>
+                    </div>
+
+                   
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Login", "Cliente")" class="btn-login">
+
+                            <div class="div-login">
+                                <p>Entrar</p>
+                                <span class="material-symbols-outlined">
+                                    login
+                                </span>
+                            </div>
+                        </a>
+                    }
 
                 <div class="menu-hamburguer">
                     <input type="checkbox" id="menu-hamburguer" class="input-menu-hamburguer">
@@ -54,10 +69,46 @@
                 </div>
 
             </nav>
+            
+        <section class="modal-usuario" onmouseover="showModal()" onmouseout="hiddenModal()">
+            <ul>
+
+
+                <a href="@Url.Action("", "Cliente")">
+                <li>
+                    <span class="material-symbols-outlined">
+                        badge
+                    </span>
+                    Conta
+                </li>
+                </a>
+
+                <a href="@Url.Action("AgendamentosConta", "Cliente", new { id = 2}) ">
+                <li>
+                    <span class="material-symbols-outlined">
+                        event_available
+                    </span>
+                    Agendamentos
+                </li>
+                </a>
+
+                <a href="@Url.Action("Logout", "Cliente")">
+                <li>
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    Sair
+                </li>
+                </a>
+
+            </ul>    
+         </section>
 
         </div>
 
     </header>
+
+
 
 
     @*MOBILE*@
@@ -67,12 +118,56 @@
         <h2>Menu</h2>
 
         <ul>
-            <li><a onclick="fecharNav()" href="#">Home</a></li>
-            <li><a onclick="fecharNav()" href="">Sobre nós</a></li>
-            <li><a onclick="fecharNav()" href="">Agendamento</a></li>
-            <li><a onclick="fecharNav()" href="x">Serviços</a></li>
-            <li><a onclick="fecharNav()" href="">Produtos</a></li>
-            <li><a onclick="fecharNav()" href="">Contato</a></li>
+
+            @if (Session["emailLogado"] != null)
+            {
+
+                <a href="@Url.Action("", "Cliente")">
+                <li>
+                    <span class="material-symbols-outlined">
+                        badge
+                    </span>
+                    Conta
+                </li>
+                </a>
+
+                <a href="@Url.Action("AgendamentosConta", "Cliente", new { id = 2}) ">
+                <li>
+                    <span class="material-symbols-outlined">
+                        event_available
+                    </span>
+                    Agendamentos
+                </li>
+                </a>
+
+                <a href="@Url.Action("Logout", "Cliente")">
+                <li>
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    Sair
+                </li>
+                </a>
+
+            }
+            else
+            {
+
+                <a href="@Url.Action("Login", "Cliente")">
+                <li>
+                    <span class="material-symbols-outlined">
+                        login
+                    </span>
+                    Entrar
+                </li>
+                </a>
+
+            }
+
+
+
+
+
         </ul>
 
     </nav>
@@ -97,7 +192,7 @@
 
 
 
-        <section class="section-servicos">
+        <section class="section-servicos" id="servicos">
 
             <h1 class="title-servico">Nossos serviços</h1>
 
@@ -122,7 +217,7 @@
 
                     <div class="card-servico">
                         <img src="~/imgs/icons/navalha.png" />
-                        <div>
+                        <div >
                             <h1>Corte e Barba</h1>
                             <p>Às vezes nem é tristeza, sabia? Você só precisa ficar na régua!</p>
                             <p class="preco">R$45,00</p>
@@ -137,17 +232,18 @@
 
     @*SESSÃO SOBRE-NOS*@
 
+    <div id="sobre"></div>
 
-    <section class="section-sobre-nos">
-        <main>
+    <section class="section-sobre-nos"  >
+        <main >
             <div>
                 <h1>Quem somos?</h1>
                 <p>
                     Bem-vindo à Barbearia Paulista, onde a tradição e a modernidade encontram-se para proporcionar uma experiência singular em cuidados masculinos.
 
-                    Fundada com uma paixão profunda por tradição e excelência, a Barbearia Paulista não é apenas um lugar onde os homens vêm para um corte de cabelo ou um barbear. Aqui, celebramos um legado que atravessa gerações, onde as técnicas clássicas de barbearia se fundem com as tendências contemporâneas.
+                    Fundada com uma paixão profunda por tradição e excelência, a Barbearia Paulista não é apenas um lugar onde os homens vêm para um corte de cabelo ou um barbear. Aqui, celebramos um legado que atravessa gerações.
 
-                    Nossa história é enraizada no coração de São Paulo, uma cidade que pulsa inovação, cultura e sofisticação. E é dessa mistura vibrante que extraímos nossa inspiração diária. Desde o nosso início, nos empenhamos em criar um santuário para o homem moderno, um espaço onde ele pode relaxar, rejuvenescer e renovar sua confiança.
+                    Nossa história é enraizada no coração de São Paulo, uma cidade que pulsa inovação, cultura e sofisticação. E é dessa mistura vibrante que extraímos nossa inspiração diária.
                 </p>
             </div>
         </main>
@@ -162,7 +258,7 @@
 
 
 
-            <section class="section-localizacao">
+            <section class="section-localizacao" id="localizacao">
 
                     <h1 class="title-localizacao">Onde estamos?</h1>
 
@@ -186,17 +282,11 @@
 
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Contato</a></li>
-                <li><a href="~/Views/Cliente/Login.cshtml">Login</a></li>
-                <li><a href="~/Views/Cliente/Cadastro.cshtml">Cadastrar</a></li>
+                <li><a href="">Email</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">WhatsApp</a></li>
             </ul>
-            <div class="nav-redes-sociais">
-                <img src="~/imgs/icons/instagram.png"/>
-                <img src="~/imgs/icons/whatsapp.png"/>
-            </div>
+           
         </nav> 
 
         <div class="footer-hr"></div>
@@ -249,5 +339,22 @@
             nav.classList.remove('active')
             removerFundo()
         }
+
+
+        /*SCRIPT PARA O MODAL USUARIO*/
+
+        const modal = document.querySelector(".modal-usuario");
+        const textLogado = document.querySelector(".text-logado");
+
+        function showModal() {
+            modal.classList.add("modal-active");
+
+        }
+
+        function hiddenModal() {
+            modal.classList.remove("modal-active");
+        }
+
+
 
     </script>
