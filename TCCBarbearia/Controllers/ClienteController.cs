@@ -34,7 +34,7 @@ namespace TCCBarbearia.Controllers
                 Session["senhaLogado"] = usuario.senha.ToString();
                 Session["nomeLogado"] = usuario.nome_usu.ToString();
                 Session["senhaLogado"] = usuario.senha.ToString();
-                Session["codLogado"] = usuario.cod_usu.ToString();
+                Session["codLogado"] = usuario.cod_usu;
                 Session["telLogado"] = usuario.tel_usu.ToString();
 
                 return RedirectToAction("AdminHome", "Admin");
@@ -80,11 +80,14 @@ namespace TCCBarbearia.Controllers
         }
 
 
-        public ActionResult Conta()
+        public ActionResult Conta(int idLogado)
         {
 
             return View();
         }
+
+
+
 
         public ActionResult AgendamentosConta(int id)
         {

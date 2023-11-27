@@ -1,15 +1,20 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Cadastro";
-    Layout = "~/Views/Shared/LayoutCadastroUsu.cshtml";
+    Layout = "~/Views/Shared/LayoutLogin.cshtml";
 }
+
 
 @model TCCBarbearia.Models.Usuario
 @using (Html.BeginForm("Cadastro", "Cliente", FormMethod.Post))
 {
 
-    <h1>Cadastre-se</h1>
 
     <main class="main-formulario">
+
+      
+
+        <h1>Cadastre-se</h1>
 
         <section class="input-section">
 
@@ -119,3 +124,4 @@
 
 
 }
+

@@ -200,9 +200,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\LoginPage.css" />
+    <Content Include="Scripts\LoginPage - Cópia .css" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\CadastroPage.css" />
     <Content Include="Scripts\FormAgendamento.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -216,13 +215,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\LayoutLogin.cshtml" />
-    <Content Include="Views\Shared\LayoutCadastroUsu.cshtml" />
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Agendamento\FormAgendamento.cshtml" />
     <Content Include="Views\Shared\_LayoutFormAgendamento.cshtml" />
-    <Content Include="Views\Home\Teste.cshtml" />
     <Content Include="Views\Cliente\Teste.cshtml" />
     <Content Include="Views\Agendamento\Concluido.cshtml" />
     <Content Include="Views\Admin\AdminHome.cshtml" />
