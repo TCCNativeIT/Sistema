@@ -67,9 +67,13 @@ namespace TCCBarbearia.Controllers
         [HttpPost]
         public ActionResult Cadastro(Usuario usuario)
         {
-            cadastro.CadastroCli(usuario);
-            ViewBag.Message = "Cadastro feito com sucesso!";
-            return RedirectToAction(nameof(Login));
+            if (!cadastro.VerificaEmail(usuario))
+            {
+                cadastro.CadastroCli(usuario);
+                ViewBag.Message = "Cadastro feito com sucesso!";
+            }
+            ModelState.AddModelError("email_usu", "Este e-mail já está em uso.");
+            return View();
         }
 
         public ActionResult Logout()

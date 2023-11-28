@@ -27,5 +27,19 @@ namespace TCCBarbearia.Acoes
 
         }   
 
+        public bool VerificaEmail(Usuario usu)
+        {
+            using (MySqlCommand cmd = new MySqlCommand("SELECT email_usu FROM tbl_Login WHERE email_usu = @emailusu", conn.ConectarBD()))
+            {
+                cmd.Parameters.Add("@emailusu", MySqlDbType.VarChar).Value = usu.email_usu;
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    // Se houver resultados, significa que o e-mail já existe
+                    return reader.Read();
+                }
+            }
+        }
+
     }
 }
