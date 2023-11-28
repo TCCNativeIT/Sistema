@@ -28,7 +28,7 @@ namespace TCCBarbearia.Acoes
                     Agendamento AgC = new Agendamento();
                     AgC.servico = Convert.ToString(leitor["servico"]);
                     AgC.preco = Convert.ToInt32(leitor["preco"]);
-                    AgC.data = Convert.ToDateTime(leitor["data"]);
+                    AgC.data = Convert.ToDateTime(leitor["data_usu"]);
                     AgC.cod_agendamento = Convert.ToInt32(leitor["cod_Agendamento"]);
 
 

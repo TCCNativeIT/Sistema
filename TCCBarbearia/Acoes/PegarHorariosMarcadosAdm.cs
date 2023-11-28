@@ -31,11 +31,11 @@ namespace TCCBarbearia.Acoes
 
                     horariosMarcados.nome_usu = Convert.ToString(leitor["nome_usu"]);
                     horariosMarcados.servico = Convert.ToString(leitor["servico"]);
-                    horariosMarcados.data = Convert.ToDateTime(leitor["data"]);
+                    horariosMarcados.data = Convert.ToDateTime(leitor["data_usu"]);
                     horariosMarcados.preco = Convert.ToInt32(leitor["preco"]);
                     horariosMarcados.cod_agendamento = Convert.ToInt32(leitor["cod_agendamento"]);
                     horariosMarcados.email_usu = Convert.ToString(leitor["email_usu"]);
-                    //horariosMarcados.tel_usu = Convert.ToString(leitor["tel_usu"]);
+                    horariosMarcados.tel_usu = Convert.ToString(leitor["tel_usu"]);
 
                     horariosMarcadosList.Add(horariosMarcados);
                 }
@@ -65,11 +65,12 @@ namespace TCCBarbearia.Acoes
 
                     horariosMarcados.nome_usu = Convert.ToString(leitor["nome_usu"]);
                     horariosMarcados.servico = Convert.ToString(leitor["servico"]);
-                    horariosMarcados.data = Convert.ToDateTime(leitor["data"]);
+                    horariosMarcados.data = Convert.ToDateTime(leitor["data_usu"]);
                     horariosMarcados.preco = Convert.ToInt32(leitor["preco"]);
                     horariosMarcados.cod_agendamento = Convert.ToInt32(leitor["cod_agendamento"]);
                     horariosMarcados.email_usu = Convert.ToString(leitor["email_usu"]);
                     horariosMarcados.tel_usu = Convert.ToString(leitor["tel_usu"]);
+                    horariosMarcados.horas = Convert.ToString(leitor["horas"]);
 
                     horariosMarcadosList.Add(horariosMarcados);
                 }
@@ -80,7 +81,8 @@ namespace TCCBarbearia.Acoes
             return horariosMarcadosList;
         }
 
-        public List<Usuario> ListarClientesCadastrados() {
+        public List<Usuario> ListarClientesCadastrados()
+        {
             List<Usuario> usuariosCadastrados = new List<Usuario>();
 
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbl_Login where nome_usu != @admin ", conn.ConectarBD());
@@ -98,7 +100,7 @@ namespace TCCBarbearia.Acoes
                     usuario.email_usu = Convert.ToString(leitor["email_usu"]);
                     usuario.tel_usu = Convert.ToString(leitor["tel_usu"]);
 
-                   usuariosCadastrados.Add(usuario);
+                    usuariosCadastrados.Add(usuario);
 
                 }
             }

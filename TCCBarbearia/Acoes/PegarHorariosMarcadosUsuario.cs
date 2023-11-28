@@ -35,6 +35,7 @@ namespace TCCBarbearia.Acoes
                     horariosMarcados.cod_agendamento = Convert.ToInt32(leitor["cod_agendamento"]);
                     horariosMarcados.email_usu = Convert.ToString(leitor["email_usu"]);
                     horariosMarcados.tel_usu = Convert.ToString(leitor["tel_usu"]);
+                    horariosMarcados.horas = Convert.ToString(leitor["horas"]);
 
                     horariosMarcadosList.Add(horariosMarcados);
                 }

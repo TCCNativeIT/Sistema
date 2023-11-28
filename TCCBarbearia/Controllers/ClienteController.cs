@@ -27,9 +27,7 @@ namespace TCCBarbearia.Controllers
         {
             login.TestarCliente(usuario);
 
-
-
-            if (usuario.nome_usu == "Admin" && usuario.email_usu == "admin@gmail.com" && usuario.senha == "12345")
+            if (usuario.nome_usu == "Admin" && usuario.email_usu == "admin@gmail.com" && usuario.senha == "123456")
             {
                 Session["emailLogado"] = usuario.email_usu.ToString();
                 Session["senhaLogado"] = usuario.senha.ToString();
