@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using TCCBarbearia.Acoes;
 using TCCBarbearia.Db;
@@ -53,7 +54,7 @@ namespace TCCBarbearia.Controllers
             }
             else
             {
-                ViewBag.Login = "Usuário não encontrado!";
+                ViewBag.Login = "Email ou senha inválidos!";
                 return View();
             }
         }
@@ -71,6 +72,7 @@ namespace TCCBarbearia.Controllers
             {
                 cadastro.CadastroCli(usuario);
                 ViewBag.Message = "Cadastro feito com sucesso!";
+                return RedirectToAction(nameof(Login));
             }
             ModelState.AddModelError("email_usu", "Este e-mail já está em uso.");
             return View();
@@ -98,6 +100,7 @@ namespace TCCBarbearia.Controllers
             PegarHorariosMarcadosUsuario horarios = new PegarHorariosMarcadosUsuario();
             List<Agendamento> horariosMarcadosConta = horarios.PegarTodosHorariosUsuarioLogado(id);
             ViewBag.HorariosMarcadosConta = horariosMarcadosConta;
+            ViewBag.QuantidadeHorarios = Enumerable.Count(ViewBag.HorariosMarcadosConta as IEnumerable<Agendamento>);
             return View();
         }
 

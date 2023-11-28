@@ -58,7 +58,7 @@ else
            })
                 @Html.ValidationMessageFor(x => x.senha, "", new { @class = "text-danger" })
             </section>
-            
+            @ViewBag.Login
 
             <button type="submit" class="button-entrar">
                 Entrar

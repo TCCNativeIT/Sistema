@@ -8,26 +8,51 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Scripts/AgendamentosContaStyle.css" media="screen" />
     <title>AgendamentosConta</title>
 </head>
 <body>
-    <div>
-        @if (ViewBag.HorariosMarcadosConta != null)
-        {
-            foreach (var horarioMarcado in ViewBag.HorariosMarcadosConta)
+
+
+    @if (@ViewBag.QuantidadeHorarios > 1)
+    {
+        <h1> Você possui @ViewBag.QuantidadeHorarios horários marcados!  </h1>
+
+    }
+    else
+    {
+        <h1> Você possui @ViewBag.QuantidadeHorarios horário marcado!  </h1>
+    }
+
+    @if (ViewBag.HorariosMarcadosConta != null)
+    {
+        <main>
+
+            @foreach (var horarioMarcado in ViewBag.HorariosMarcadosConta)
             {
 
-                <div>
-                    <h1>@horarioMarcado.nome_usu</h1>
-                    <h1>@horarioMarcado.servico</h1>
-                    <h1>@horarioMarcado.preco</h1>
-                    <h1>@horarioMarcado.data</h1>
-                    <h1>@horarioMarcado.horas</h1>
+                <div class="div-agendamento">
+
+                    <h2>@horarioMarcado.servico</h2>
+                    <div class="agendamento-info">
+                        <p>@*@horarioMarcado.data*@04/12</p>
+                        <p>@*@horarioMarcado.horas*@16:00</p>
+                        <p><b>R$@horarioMarcado.preco,00</b></p>
+                    </div>
 
                 </div>
 
             }
-        }
-    </div>
+        </main>
+    }
+    else
+    {
+        <div>
+            <h2>Nenhum horário encontrado!</h2>
+        </div>
+
+    }
+            @Html.ActionLink("Agendar agora", "FormAgendamento", "Agendamento", null, new { @class = "agendar-button" })
+
 </body>
 </html>

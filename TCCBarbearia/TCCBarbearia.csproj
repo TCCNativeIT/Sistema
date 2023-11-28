@@ -180,6 +180,7 @@
     <Content Include="imgs\sobre-nos.jpg" />
     <Content Include="Scripts\AdminHomeStyles - Cópia .css" />
     <Content Include="Scripts\AdminHomeStyles.css" />
+    <Content Include="Scripts\AgendamentosContaStyle.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />

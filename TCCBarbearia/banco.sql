@@ -29,8 +29,8 @@ VALUES('12345','Admin','11946299768','admin@gmail.com');
 
 SELECT * FROM tbl_Login;
 
-INSERT INTO tbl_Agendamento(cod_agendamento, servico, preco, horario, nome_usu, cod_usu)
-VALUES(2, "Corte Cabelo", 35, "2023-10-10", "Guilherme Salada", 3 );
+INSERT INTO tbl_Agendamento(cod_agendamento, servico, preco, nome_usu, email_usu, tel_usu, cod_usu)
+VALUES(6, "Corte Cabelo", 35, "Guilherme Sella Fernandes", "guilherme@sella.com", "11959848463", 18 );
 
 SELECT * FROM tbl_Agendamento;
 
