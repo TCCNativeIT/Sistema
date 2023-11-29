@@ -29,6 +29,8 @@ body {
     padding: 10px 20px;
 }
 
+
+
     .sidebar img {
         height: 250px;
         width: 250px;
@@ -104,6 +106,8 @@ body {
     gap: 10px;
 }
 
+       /* CARDS*/
+
 .card-agendamento {
     width: 90%;
     padding: 3vh 20px;
@@ -137,18 +141,52 @@ card-detalhes .horario-preco {
 }
 
 .card-button-detalhes {
-    color: white;
-    font-weight: 600;
-    font-size: 15px;
-    background-color: black;
-    padding: 15px 20px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    cursor: pointer;
+    color:white;
 }
 
 .preco {
     font-weight: bolder;
 }
 
+
+/*TABELA USUÁRIOS*/
+
+
+table {
+}
+
+table thead tr th {
+    padding: 5px 10px;
+}
+
+    table tbody tr{
+        background-color: rgba(200, 200, 200, 0.162);
+
+    }
+
+        table tbody tr:hover {
+            background-color: rgba(200, 200, 200, 0.476);
+        }
+
+    table tbody tr td {
+        padding: 25px 5px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0px;
+    }
+}

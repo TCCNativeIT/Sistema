@@ -13,20 +13,68 @@
 </head>
 <body>
     <div>
-        @foreach (var horario in ViewBag.HorarioMarcado)
+
+
+        @*@using (Html.BeginForm("FormAgendamento", "Agendamento", FormMethod.Post))
         {
 
-                    <h1>@horario.nome_usu</h1>
-                    <h3>@horario.servico</h3>
-                    <h3>@horario.email_usu</h3>
-                    <h3>@horario.tel_usu</h3>
-                    <h3>@horario.preco</h3>
-                    <h3>@horario.horas</h3>
-                    <h3>@horario.data</h3>
+            <div>
+                <label for="">Nome:</label>
+                <input type="text" value="@Session["nomeLogado"]" readonly />
+            </div>
 
-                
+            <div>
+                <label for="">Email:</label>
+                <input type="text" value="@Session["emailLogado"]" readonly name="" id="">
+            </div>
 
-        }
+            <div>
+                <label for="">Escolha um serviço:</label>
+                <div class="div-radios">
+
+                    <div>
+                        <label>
+                            @Html.RadioButtonFor(m => m.servico, "CorteCabelo")
+                            Corte de Cabelo
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            @Html.RadioButtonFor(m => m.servico, "Barba")
+                            Barba
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            @Html.RadioButtonFor(m => m.servico, "CorteEBarba")
+                            Corte e Barba
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <label for="">Data:</label>
+                @Html.LabelFor(model => model.data, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.data, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div>
+                <label for="">Horário:</label>
+                @Html.EditorFor(model => model.horas, new { htmlAttributes = new { @class = "form-control" } })
+            </div><button type="submit" class="btn-agendar">Agendar</button>
+        }*@
+
+            @*<h1>@ViewBag.HorarioMarcado.nome_usu</h1>
+            <h3>@ViewBag.HorarioMarcado.servico</h3>
+            <h3>@ViewBag.HorarioMarcado.email_usu</h3>
+            <h3>@ViewBag.HorarioMarcado.tel_usu</h3>
+            <h3>@ViewBag.HorarioMarcado.preco</h3>
+            <h3>@ViewBag.HorarioMarcado.horas</h3>
+            <h3>@ViewBag.HorarioMarcado.data</h3>*@
+
+
+
     </div>
 </body>
 </html>

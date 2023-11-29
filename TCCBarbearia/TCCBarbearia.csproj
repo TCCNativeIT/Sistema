@@ -178,8 +178,7 @@
     <Content Include="imgs\bigodebranco.png" />
     <Content Include="imgs\imgFormAgendamento.jpg" />
     <Content Include="imgs\sobre-nos.jpg" />
-    <Content Include="Scripts\AdminHomeStyles - Cópia .css" />
-    <Content Include="Scripts\AdminHomeStyles.css" />
+    <Content Include="Scripts\AdminHomeStyles - Cópia.css" />
     <Content Include="Scripts\AgendamentosContaStyle.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -191,6 +190,8 @@
     <Content Include="Scripts\FormAgendamentoStyle.css" />
     <Content Include="Scripts\Hamburguer - Cópia .css" />
     <Content Include="Scripts\HomePageCss.css" />
+    <Content Include="Scripts\ModalSair.css" />
+    <Content Include="Scripts\ModalSairScript.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />

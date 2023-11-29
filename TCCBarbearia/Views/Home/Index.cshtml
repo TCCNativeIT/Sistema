@@ -13,6 +13,7 @@
     <title>Home - Barbearia Paulista</title>
     <link rel="stylesheet" type="text/css" href="~/Scripts/HomePageCss.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="~/Scripts/Hamburguer - Cópia .css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Scripts/ModalSair.css" media="screen" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
@@ -24,7 +25,7 @@
 
 
                 <nav>
-                        <div class="nav-logo"></div>
+                    <div class="nav-logo"></div>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#servicos">Serviços</a></li>
@@ -35,28 +36,28 @@
                 </nav>
 
                 @if (Session["emailLogado"] != null)
-{
+                {
                     <div class="div-logado" onmouseover="showModal()">
                         <span class="material-symbols-outlined">
                             account_circle
                         </span>
-                        <h3 class="text-logado"  >Olá, @Session["nomeLogado"]!</h3>
+                        <h3 class="text-logado">Olá, @Session["nomeLogado"]!</h3>
                     </div>
 
-                   
-                    }
-                    else
-                    {
-                        <a href="@Url.Action("Login", "Cliente")" class="btn-login">
 
-                            <div class="div-login">
-                                <p>Entrar</p>
-                                <span class="material-symbols-outlined">
-                                    login
-                                </span>
-                            </div>
-                        </a>
-                    }
+                }
+                else
+                {
+                    <a href="@Url.Action("Login", "Cliente")" class="btn-login">
+
+                        <div class="div-login">
+                            <p>Entrar</p>
+                            <span class="material-symbols-outlined">
+                                login
+                            </span>
+                        </div>
+                    </a>
+                }
 
                 <div class="menu-hamburguer">
                     <input type="checkbox" id="menu-hamburguer" class="input-menu-hamburguer">
@@ -69,44 +70,70 @@
                 </div>
 
             </nav>
-            
-        <section class="modal-usuario" onmouseover="showModal()" onmouseout="hiddenModal()">
-            <ul>
+
+            <section class="modal-usuario" onmouseover="showModal()" onmouseout="hiddenModal()">
+                <ul>
 
 
-                <a href="@Url.Action("Conta", "Cliente", new {idLogado =  Session["codLogado"]})">
-                <li>
-                    <span class="material-symbols-outlined">
-                        badge
-                    </span>
-                    Conta
-                </li>
-                </a>
+                    <a href="@Url.Action("Conta", "Cliente", new {idLogado =  Session["codLogado"]})">
+                    <li>
+                        <span class="material-symbols-outlined">
+                            badge
+                        </span>
+                        Conta
+                    </li>
+                    </a>
 
-                <a href="@Url.Action("AgendamentosConta", "Cliente", new { id = Session["codLogado"]}) ">
-                <li>
-                    <span class="material-symbols-outlined">
-                        event_available
-                    </span>
-                    Agendamentos
-                </li>
-                </a>
+                    <a href="@Url.Action("AgendamentosConta", "Cliente", new { id = Session["codLogado"]}) ">
+                    <li>
+                        <span class="material-symbols-outlined">
+                            event_available
+                        </span>
+                        Agendamentos
+                    </li>
+                    </a>
 
-                <a href="@Url.Action("Logout", "Cliente")">
-                <li>
-                    <span class="material-symbols-outlined">
-                        logout
-                    </span>
-                    Sair
-                </li>
-                </a>
+                    <a onclick="openModal()">
+                    <li>
+                        <span class="material-symbols-outlined">
+                            logout
+                        </span>
+                        Sair
+                    </li>
+                    </a>
 
-            </ul>    
-         </section>
+                </ul>
+            </section>
 
         </div>
 
     </header>
+
+
+                    @*MODAL SAIR*@
+
+    <div class="fundo-preto">
+        <div class="modal-sair">
+
+
+
+            <div>
+                <h2>Certeza que deseja fazer Logout?</h2>
+            </div>
+
+
+            <div class="div-btns">
+                <a onclick="fecharModal()" class="btn-cancelar">
+                    Cancelar
+                </a>
+
+                <a href="@Url.Action("Logout", "Cliente")" class="btn-sair">
+                    Sair
+                </a>
+            </div>
+
+        </div>
+    </div>
 
 
 
@@ -177,7 +204,7 @@
     <section class="banner" id="banner">
 
         <article class="banner-imagem">
-        
+
             <div class="banner-logo">
 
             </div>
@@ -192,50 +219,50 @@
 
 
 
-        <section class="section-servicos" id="servicos">
+    <section class="section-servicos" id="servicos">
 
-            <h1 class="title-servico">Nossos serviços</h1>
+        <h1 class="title-servico">Nossos serviços</h1>
 
-            <main class="cards-servicos">
-                    <div class="card-servico">
-                        <img src="~/imgs/icons/tesoura.png" />
-                        <div>
-                            <h1>Corte</h1>
-                            <p>Às vezes nem é tristeza, sabia? Você só precisa ficar na régua!</p>
-                            <p class="preco">R$45,00</p>
-                        </div>
-                    </div>
+        <main class="cards-servicos">
+            <div class="card-servico">
+                <img src="~/imgs/icons/tesoura.png" />
+                <div>
+                    <h1>Corte</h1>
+                    <p>Às vezes nem é tristeza, sabia? Você só precisa ficar na régua!</p>
+                    <p class="preco">R$45,00</p>
+                </div>
+            </div>
 
-                    <div class="card-servico">
-                        <img src="~/imgs/icons/barba.png" />
-                        <div>
-                            <h1>Barba</h1>
-                            <p>Um homem com sua barba bem cuidada não quer guerra com ninguém.</p>
-                            <p class="preco">R$45,00</p>
-                        </div>
-                    </div>
+            <div class="card-servico">
+                <img src="~/imgs/icons/barba.png" />
+                <div>
+                    <h1>Barba</h1>
+                    <p>Um homem com sua barba bem cuidada não quer guerra com ninguém.</p>
+                    <p class="preco">R$45,00</p>
+                </div>
+            </div>
 
-                    <div class="card-servico">
-                        <img src="~/imgs/icons/navalha.png" />
-                        <div >
-                            <h1>Corte e Barba</h1>
-                            <p>Às vezes nem é tristeza, sabia? Você só precisa ficar na régua!</p>
-                            <p class="preco">R$45,00</p>
-                        </div>
-                    </div>
-            </main>
+            <div class="card-servico">
+                <img src="~/imgs/icons/navalha.png" />
+                <div>
+                    <h1>Corte e Barba</h1>
+                    <p>Às vezes nem é tristeza, sabia? Você só precisa ficar na régua!</p>
+                    <p class="preco">R$45,00</p>
+                </div>
+            </div>
+        </main>
 
-            @Html.ActionLink("Agendar agora", "FormAgendamento", "Agendamento" ,null, new { @class = "agendar-button"})
+        @Html.ActionLink("Agendar agora", "FormAgendamento", "Agendamento", null, new { @class = "agendar-button" })
 
-        </section>
+    </section>
 
 
     @*SESSÃO SOBRE-NOS*@
 
     <div id="sobre"></div>
 
-    <section class="section-sobre-nos"  >
-        <main >
+    <section class="section-sobre-nos">
+        <main>
             <div>
                 <h1>Quem somos?</h1>
                 <p>
@@ -258,19 +285,19 @@
 
 
 
-            <section class="section-localizacao" id="localizacao">
+    <section class="section-localizacao" id="localizacao">
 
-                    <h1 class="title-localizacao">Onde estamos?</h1>
+        <h1 class="title-localizacao">Onde estamos?</h1>
 
-                    <div class="div-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.053690563623!2d-46.6513610569813!3d-23.566515099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b8c06ff15d%3A0x733d66194814e334!2sAv.%20Paulista%2C%20742%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1698253785731!5m2!1spt-BR!2sbr"
-                                width="1000px"
-                                height="600px"
-                                frameborder="0">
-                        </iframe>
-                    </div>
+        <div class="div-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.053690563623!2d-46.6513610569813!3d-23.566515099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b8c06ff15d%3A0x733d66194814e334!2sAv.%20Paulista%2C%20742%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1698253785731!5m2!1spt-BR!2sbr"
+                    width="1000px"
+                    height="600px"
+                    frameborder="0">
+            </iframe>
+        </div>
 
-            </section>
+    </section>
 
 
 
@@ -286,18 +313,18 @@
                 <li><a href="">Instagram</a></li>
                 <li><a href="">WhatsApp</a></li>
             </ul>
-           
-        </nav> 
+
+        </nav>
 
         <div class="footer-hr"></div>
 
 
         <figure>
             <div class="logo-footer"></div>
-            
+
         </figure>
 
-       
+
 
 
     </footer>
@@ -356,5 +383,23 @@
         }
 
 
+        /*SCRIPT MODAL SAIR*/
+
+
+        const body = document.querySelector("body")
+        const modalSair = document.querySelector(".modal-sair");
+        const fundoPreto = document.querySelector(".fundo-preto");
+
+        function openModal() {
+            modalSair.classList.add("modal-open");
+            fundoPreto.classList.add("modal-open")
+            body.classList.add("no-scroll")
+        }
+
+        function fecharModal() {
+            modalSair.classList.remove("modal-open");
+            fundoPreto.classList.remove("modal-open");
+            body.classList.remove("no-scroll")
+        }
 
     </script>
