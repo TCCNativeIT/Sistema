@@ -29,9 +29,11 @@ namespace TCCBarbearia.Acoes
                 {
                     Agendamento horariosMarcados = new Agendamento();
 
+                    horariosMarcados.cod_usu = Convert.ToString(leitor["cod_usu"]);
                     horariosMarcados.nome_usu = Convert.ToString(leitor["nome_usu"]);
                     horariosMarcados.servico = Convert.ToString(leitor["servico"]);
-                    horariosMarcados.data = Convert.ToDateTime(leitor["data_usu"]);
+                    horariosMarcados.horas = Convert.ToString(leitor["horas"]);
+                    horariosMarcados.data = Convert.ToDateTime(leitor["data"]);
                     horariosMarcados.preco = Convert.ToInt32(leitor["preco"]);
                     horariosMarcados.cod_agendamento = Convert.ToInt32(leitor["cod_agendamento"]);
                     horariosMarcados.email_usu = Convert.ToString(leitor["email_usu"]);
@@ -65,7 +67,7 @@ namespace TCCBarbearia.Acoes
 
                     horariosMarcados.nome_usu = Convert.ToString(leitor["nome_usu"]);
                     horariosMarcados.servico = Convert.ToString(leitor["servico"]);
-                    horariosMarcados.data = Convert.ToDateTime(leitor["data_usu"]);
+                    horariosMarcados.data = Convert.ToDateTime(leitor["data"]);
                     horariosMarcados.preco = Convert.ToInt32(leitor["preco"]);
                     horariosMarcados.cod_agendamento = Convert.ToInt32(leitor["cod_agendamento"]);
                     horariosMarcados.email_usu = Convert.ToString(leitor["email_usu"]);
@@ -96,6 +98,7 @@ namespace TCCBarbearia.Acoes
                 while (leitor.Read())
                 {
                     Usuario usuario = new Usuario();
+                    usuario.cod_usu = Convert.ToInt32(leitor["cod_usu"]);
                     usuario.nome_usu = Convert.ToString(leitor["nome_usu"]);
                     usuario.email_usu = Convert.ToString(leitor["email_usu"]);
                     usuario.tel_usu = Convert.ToString(leitor["tel_usu"]);
