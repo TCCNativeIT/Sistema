@@ -16,6 +16,7 @@ namespace TCCBarbearia.Controllers
         LoginCliente login = new LoginCliente();
         CadastroCliente cadastro = new CadastroCliente();
         Usuario usu = new Usuario();
+        UpdateCliente UpC = new UpdateCliente();
         public ActionResult Login()
         {
             return View();
@@ -27,7 +28,7 @@ namespace TCCBarbearia.Controllers
         {
             login.TestarCliente(usuario);
 
-            if (usuario.email_usu == "admin@gmail.com" && usuario.senha == "12345")
+            if (usuario.email_usu == "admin@gmail.com")
             {
                 Session["emailLogado"] = usuario.email_usu.ToString();
                 Session["senhaLogado"] = usuario.senha.ToString();
@@ -83,10 +84,17 @@ namespace TCCBarbearia.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-
+        [HttpGet]
         public ActionResult Conta(int idLogado)
         {
 
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Conta(Usuario usu)
+        {
+            UpC.AlteraCliente();
             return View();
         }
 

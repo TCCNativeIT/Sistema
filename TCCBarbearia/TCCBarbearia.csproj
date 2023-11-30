@@ -127,6 +127,7 @@
     <Compile Include="Acoes\LoginCliente.cs" />
     <Compile Include="Acoes\PegarHorariosMarcadosAdm.cs" />
     <Compile Include="Acoes\PegarHorariosMarcadosUsuario.cs" />
+    <Compile Include="Acoes\UpdateCliente.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

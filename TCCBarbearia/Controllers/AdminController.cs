@@ -21,9 +21,16 @@ namespace TCCBarbearia.Controllers
 
         public ActionResult AdminHome()
         {
-            List<Agendamento> horariosList = pegarHorarios.PegarTodosHorarios();
-            ViewBag.HorariosList = horariosList;
-            return View();
+            if (Session["emailLogado"] == null)
+            {
+                return RedirectToAction("Login", "Cliente", "Home");
+            }
+            else
+            {
+                List<Agendamento> horariosList = pegarHorarios.PegarTodosHorarios();
+                ViewBag.HorariosList = horariosList;
+                return View();
+            }
         }
 
         public ActionResult AdminDetalhesCorte(Int32 idAgendamento)

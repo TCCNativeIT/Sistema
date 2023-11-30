@@ -34,7 +34,7 @@ namespace TCCBarbearia.Acoes
 
 
 
-
+                
             cmd.Parameters.Add("@data_usu", MySqlDbType.DateTime).Value = Ag.data;
             cmd.Parameters.Add("@nome_usu", MySqlDbType.VarChar).Value = Ag.nome_usu;
             cmd.Parameters.Add("@cod_usu", MySqlDbType.Int32).Value = Ag.cod_usu;
