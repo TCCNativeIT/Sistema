@@ -81,22 +81,21 @@ namespace TCCBarbearia.Controllers
             Session["senhaLogado"] = null;
             return RedirectToAction("Index", "Home");
         }
-
-        public ActionResult Conta(int idLogado)
+        
+        public ActionResult Conta(int Id)
         {
-
-            UpC.AlteraCliente(idLogado);
-            return RedirectToAction("Alterado", "Cliente");
+            ViewBag.nomeLogado = Session["nomeLogado"];
+            return View();
         }
 
-/*
-        public ActionResult Conta(Usuario usuario)
+        [HttpPost]
+        public ActionResult Conta(Usuario usu, int Id)
         {
-            
-            UpC.AlteraCliente(usu);
-                return RedirectToAction("Alterado", "Cliente");
+
+            UpC.AlteraCliente(usu,Id);
+            return RedirectToAction("Index", "Home");
         }
-*/
+
 
 
 
@@ -109,9 +108,6 @@ namespace TCCBarbearia.Controllers
             return View();
         }
 
-        public ActionResult Alterado()
-        {
-            return View();
-        }
+       
     }
 }

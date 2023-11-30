@@ -1,4 +1,4 @@
-﻿
+﻿@model TCCBarbearia.Models.Usuario
 @{
     Layout = null;
 }
@@ -12,31 +12,22 @@
 </head>
 <body>
     <div>
-        <form>
-            <div>
-                <label for="">Nome:</label>
-                <input type="text" value="@Session["nomeLogado"]" />
-            </div>
 
-            <div>
-                <label for="">Email:</label>
-                <input type="text" value="@Session["emailLogado"]" name="" id="">
-            </div>
+        @using (Html.BeginForm("Conta", "Cliente", FormMethod.Post))
+        {
 
+            @Html.TextBoxFor(model => model.nome_usu, new { @class = "form-control", value = @Session["nomeLogado"] })
+            @Html.TextBoxFor(model => model.email_usu, new { @class = "form-control", type="email", value = @Session["emailLogado"] })
+            @Html.TextBoxFor(model => model.tel_usu, new { @class = "form-control", type = "tel", value = @Session["telLogado"] })
+            @Html.TextBoxFor(model => model.senha, new { @class = "form-control", type = "password", value = @Session["senhaLogado"] })
 
-            <div>
-                <label for="">Email:</label>
-                <input type="text" value="@Session["senhaLogado"]" name="" id="">
-            </div>
-
-
-            <div>
-                <label for="">Email:</label>
-                <input type="text" value="@Session["telLogado"]" name="" id="">
-            </div>
 
             <input type="submit" value="Alterar" />
-        </form>
+
+        }
+
+
+
     </div>
 </body>
 </html>
