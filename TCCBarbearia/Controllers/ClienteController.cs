@@ -33,7 +33,6 @@ namespace TCCBarbearia.Controllers
                 Session["emailLogado"] = usuario.email_usu.ToString();
                 Session["senhaLogado"] = usuario.senha.ToString();
                 Session["nomeLogado"] = usuario.nome_usu.ToString();
-                Session["senhaLogado"] = usuario.senha.ToString();
                 Session["codLogado"] = usuario.cod_usu;
                 Session["telLogado"] = usuario.tel_usu.ToString();
 
@@ -44,7 +43,6 @@ namespace TCCBarbearia.Controllers
                 Session["emailLogado"] = usuario.email_usu.ToString();
                 Session["senhaLogado"] = usuario.senha.ToString();
                 Session["nomeLogado"] = usuario.nome_usu.ToString();
-                Session["senhaLogado"] = usuario.senha.ToString();
                 Session["codLogado"] = usuario.cod_usu.ToString();
                 Session["telLogado"] = usuario.tel_usu.ToString();
 
@@ -84,20 +82,21 @@ namespace TCCBarbearia.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpGet]
         public ActionResult Conta(int idLogado)
         {
 
-            return View();
+            UpC.AlteraCliente(idLogado);
+            return RedirectToAction("Alterado", "Cliente");
         }
 
-        [HttpPost]
-        public ActionResult Conta(Usuario usu)
+/*
+        public ActionResult Conta(Usuario usuario)
         {
-            UpC.AlteraCliente();
-            return View();
+            
+            UpC.AlteraCliente(usu);
+                return RedirectToAction("Alterado", "Cliente");
         }
-
+*/
 
 
 
@@ -110,6 +109,9 @@ namespace TCCBarbearia.Controllers
             return View();
         }
 
-
+        public ActionResult Alterado()
+        {
+            return View();
+        }
     }
 }

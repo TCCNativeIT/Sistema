@@ -12,32 +12,31 @@
 </head>
 <body>
     <div>
-        @using (Html.BeginForm("FormAltera", "Conta", FormMethod.Post))
-        {
+        <form>
             <div>
                 <label for="">Nome:</label>
                 <input type="text" value="@Session["nomeLogado"]" />
             </div>
 
-        <div>
-            <label for="">Email:</label>
-            <input type="text" value="@Session["emailLogado"]" name="" id="">
-        </div>
+            <div>
+                <label for="">Email:</label>
+                <input type="text" value="@Session["emailLogado"]" name="" id="">
+            </div>
 
 
-        <div>
-            <label for="">Email:</label>
-            <input type="text" value="@Session["senhaLogado"]" name="" id="">
-        </div>
+            <div>
+                <label for="">Email:</label>
+                <input type="text" value="@Session["senhaLogado"]" name="" id="">
+            </div>
 
 
-        <div>
-            <label for="">Email:</label>
-            <input type="text" value="@Session["telLogado"]" name="" id="">
-        </div>
+            <div>
+                <label for="">Email:</label>
+                <input type="text" value="@Session["telLogado"]" name="" id="">
+            </div>
 
-        <input type="submit" value="Alterar"/>
-        }
+            <input type="submit" value="Alterar" />
+        </form>
     </div>
 </body>
 </html>

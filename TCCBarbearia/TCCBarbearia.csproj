@@ -232,6 +232,7 @@
     <Content Include="Views\Agendamento\Formes.cshtml" />
     <Content Include="Views\Cliente\AgendamentosConta.cshtml" />
     <Content Include="Views\Cliente\Conta.cshtml" />
+    <Content Include="Views\Cliente\Alterado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
