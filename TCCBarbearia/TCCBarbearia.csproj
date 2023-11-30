@@ -188,6 +188,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\ContaPage.css" />
     <Content Include="Scripts\FormAgendamentoStyle.css" />
     <Content Include="Scripts\Hamburguer - Cópia .css" />
     <Content Include="Scripts\HomePageCss.css" />

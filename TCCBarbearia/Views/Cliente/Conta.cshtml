@@ -8,26 +8,107 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Scripts/ContaPage.css" media="screen" />
     <title>Conta</title>
 </head>
 <body>
-    <div>
-
-        @using (Html.BeginForm("Conta", "Cliente", FormMethod.Post))
-        {
-
-            @Html.TextBoxFor(model => model.nome_usu, new { @class = "form-control", value = @Session["nomeLogado"] })
-            @Html.TextBoxFor(model => model.email_usu, new { @class = "form-control", type="email", value = @Session["emailLogado"] })
-            @Html.TextBoxFor(model => model.tel_usu, new { @class = "form-control", type = "tel", value = @Session["telLogado"] })
-            @Html.TextBoxFor(model => model.senha, new { @class = "form-control", type = "password", value = @Session["senhaLogado"] })
 
 
-            <input type="submit" value="Alterar" />
+    <h1>Sua Conta</h1>
 
-        }
+    @using (Html.BeginForm("Conta", "Cliente", FormMethod.Post))
+    {
+
+        <div>
+
+            @Html.EditorFor(x => x.nome_usu, new
+       {
+           htmlAttributes = new
+           {
+
+            id = "txtNome",
+            senha = "txtNome",
+            type = "text",
+            value = Session["nomeLogado"],
+            @class = "",
+            placeholder = "Nome",
+            required = "required",
+            maxLength = "50"
+
+           }
+       })
+
+        </div>
+
+        <div>
+
+            @Html.EditorFor(x => x.email_usu, new
+          {
+              htmlAttributes = new
+              {
+
+                      id = "txtEmail",
+                      senha = "txtEmail",
+                      type = "email",
+                      value = Session["emailLogado"],
+                      @class = "",
+                      placeholder = "Email",
+                      required = "required",
+                      maxLength = "50"
+
+              }
+          })
+
+        </div>
+
+
+        <div>
+
+            @Html.EditorFor(x => x.tel_usu, new
+       {
+           htmlAttributes = new
+           {
+               id = "txtTel",
+               type = "text",
+               value = Session["telLogado"],
+               @class = "",
+               placeholder = "Telefone",
+               required = "required",
+               maxLength = "50"
+           }
+       })
+
+        </div>
+
+
+        <div>
+
+            @Html.EditorFor(x => x.senha, new
+           {
+               htmlAttributes = new
+               {
+
+                       id = "txtsenha",
+                       type = "text",
+                       value = Session["senhaLogado"],
+                       @class = "",
+                       placeholder = "Senha",
+                       required = "required",
+
+
+               }
+
+           })
+
+        </div>
+
+        <button class="btn-salvar">Salvar</button>
+        <p style="text-align:center">Voltar para o @Html.ActionLink("Menu", "Index", "Home") </p>
+
+    }
 
 
 
-    </div>
+
 </body>
 </html>
