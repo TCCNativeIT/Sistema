@@ -12,8 +12,8 @@ namespace TCCBarbearia.Acoes
 
         public void InsereAgenda(Agendamento Ag)
         {
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO Tbl_Agendamento(servico,preco,data_usu,nome_usu,cod_usu,email_usu,tel_usu, horas) " +
-                "VALUES(@servico, @preco,@data_usu, @nome_usu, @cod_usu, @email_usu, @tel_usu, @horas)", con.ConectarBD());
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO Tbl_Agendamento(servico,preco,data_usu,nome_usu,cod_usu,email_usu,tel_usu,cod_horas)" +
+                "VALUES(@servico, @preco,@data_usu, @nome_usu, @cod_usu, @email_usu, @tel_usu, @cod_horas)", con.ConectarBD());
 
             cmd.Parameters.Add("@servico", MySqlDbType.VarChar).Value = Ag.servico;
 
@@ -40,7 +40,7 @@ namespace TCCBarbearia.Acoes
             cmd.Parameters.Add("@cod_usu", MySqlDbType.Int32).Value = Ag.cod_usu;
             cmd.Parameters.Add("@email_usu", MySqlDbType.VarChar).Value = Ag.email_usu;
             cmd.Parameters.Add("@tel_usu", MySqlDbType.VarChar).Value = Ag.tel_usu;
-            cmd.Parameters.Add("@horas", MySqlDbType.VarChar).Value = Ag.horas;
+            cmd.Parameters.Add("@cod_horas", MySqlDbType.VarChar).Value = Ag.cod_horas;
 
             cmd.ExecuteNonQuery();
             con.DesconectarBD();

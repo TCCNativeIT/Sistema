@@ -65,7 +65,10 @@
         </div>
         <div>
             <label for="">Horário:</label>
-            @Html.EditorFor(model => model.horas, new { htmlAttributes = new { @class = "form-control" } })
+            @* @Html.EditorFor(model => model.horas, new { htmlAttributes = new { @class = "form-control" } })
+            *@
+            @Html.DropDownList("Horas", "Escolha o horário")
+
         </div><button type="submit" class="btn-agendar">Agendar</button> 
 }
 

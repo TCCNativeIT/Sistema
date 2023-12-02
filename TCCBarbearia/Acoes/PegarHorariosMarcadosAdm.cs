@@ -16,8 +16,9 @@ namespace TCCBarbearia.Acoes
         public List<Agendamento> PegarTodosHorarios()
         {
             List<Agendamento> horariosMarcadosList = new List<Agendamento>();
-
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbl_Agendamento", conn.ConectarBD());
+/*
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbl_Agendamento", conn.ConectarBD());*/
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbl_Agendamento INNER JOIN tbl_Horas ON tbl_Agendamento.cod_Horas = tbl_Horas.cod_Horas;", conn.ConectarBD());
 
             MySqlDataReader leitor;
 
@@ -32,7 +33,7 @@ namespace TCCBarbearia.Acoes
                     horariosMarcados.cod_usu = Convert.ToString(leitor["cod_usu"]);
                     horariosMarcados.nome_usu = Convert.ToString(leitor["nome_usu"]);
                     horariosMarcados.servico = Convert.ToString(leitor["servico"]);
-                    horariosMarcados.horas = Convert.ToString(leitor["horas"]);
+                    horariosMarcados.horas = Convert.ToString(leitor["horarios"]);
                     horariosMarcados.data = Convert.ToDateTime(leitor["data_usu"]);
                     horariosMarcados.preco = Convert.ToInt32(leitor["preco"]);
                     horariosMarcados.cod_agendamento = Convert.ToInt32(leitor["cod_agendamento"]);

@@ -8,7 +8,7 @@ namespace TCCBarbearia.Db
 {
     public class conn
     {
-        MySqlConnection con = new MySqlConnection("server=localhost;user=root;password=password;database=BdBarbearia");
+        MySqlConnection con = new MySqlConnection("server=localhost;user=root;password=14154678;database=BdBarbearia");
         public static string msg;
             
         public MySqlConnection ConectarBD()
