@@ -22,6 +22,6 @@ namespace TCCBarbearia.Models
         public string cod_usu { get; set; }
         public string email_usu { get; set; }
         public string tel_usu { get; set; }
-        public string cod_horas { get; set; }
+        public string cod_horas  { get; set; }
     }
 }

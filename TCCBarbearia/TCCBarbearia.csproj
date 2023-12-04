@@ -124,6 +124,7 @@
     <Compile Include="Acoes\AgendamentoCliente.cs" />
     <Compile Include="Acoes\CadastroCliente.cs" />
     <Compile Include="Acoes\Carrinho.cs" />
+    <Compile Include="Acoes\DeleteHorario.cs" />
     <Compile Include="Acoes\LoginCliente.cs" />
     <Compile Include="Acoes\PegarHorariosMarcadosAdm.cs" />
     <Compile Include="Acoes\PegarHorariosMarcadosUsuario.cs" />
@@ -234,6 +235,7 @@
     <Content Include="Views\Cliente\AgendamentosConta.cshtml" />
     <Content Include="Views\Cliente\Conta.cshtml" />
     <Content Include="Views\Cliente\Alterado.cshtml" />
+    <Content Include="Views\Admin\AdminDeletar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

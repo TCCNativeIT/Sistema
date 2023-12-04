@@ -18,6 +18,7 @@ data_usu DATETIME NOT NULL,
 nome_usu VARCHAR(50) NOT NULL,
 email_usu VARCHAR(50) NOT NULL,
 tel_usu VARCHAR(11) NOT NULL,
+horas VARCHAR(20),
 cod_usu INT,
 cod_horas INT,
 FOREIGN KEY (cod_horas) REFERENCES Tbl_Horas(cod_horas)

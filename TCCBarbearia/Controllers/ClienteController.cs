@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web.Mvc;
 using TCCBarbearia.Acoes;
@@ -84,16 +85,15 @@ namespace TCCBarbearia.Controllers
         
         public ActionResult Conta(int Id)
         {
-            ViewBag.nomeLogado = Session["nomeLogado"];
             return View();
         }
 
         [HttpPost]
         public ActionResult Conta(Usuario usu, int Id)
         {
-
+            Session["telLogado"] = usu.tel_usu.ToString();
             UpC.AlteraCliente(usu,Id);
-            return RedirectToAction("Index", "Home");
+            return View();
         }
 
 

@@ -23,10 +23,7 @@ namespace TCCBarbearia.Acoes
 
                 cmd.ExecuteNonQuery();
             }
-            
             con.DesconectarBD();
-
-
         }
     }
 }

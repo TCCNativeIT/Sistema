@@ -21,6 +21,7 @@
 
         <div>
 
+            <input type="text" value="@Session["nomeLogado"]" />
             @Html.EditorFor(x => x.nome_usu, new
        {
            htmlAttributes = new
@@ -42,6 +43,7 @@
 
         <div>
 
+            <input type="text" value="@Session["emailLogado"]" />
             @Html.EditorFor(x => x.email_usu, new
           {
               htmlAttributes = new
@@ -63,7 +65,7 @@
 
 
         <div>
-
+            <input type="text" value="@Session["telLogado"]"/>
             @Html.EditorFor(x => x.tel_usu, new
        {
            htmlAttributes = new
@@ -83,6 +85,7 @@
 
         <div>
 
+            <input type="text" value="@Session["senhaLogado"]" />
             @Html.EditorFor(x => x.senha, new
            {
                htmlAttributes = new
@@ -90,7 +93,7 @@
 
                        id = "txtsenha",
                        type = "text",
-                       value = Session["senhaLogado"],
+                       @value = "Session['senhaLogado']",
                        @class = "",
                        placeholder = "Senha",
                        required = "required",
