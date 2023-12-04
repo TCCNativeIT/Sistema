@@ -13,8 +13,8 @@
 </head>
 <body>
     <div>
-        
-            @Html.ActionLink("Excluir horário", "AdminDeletar", "Admin")
+
+
 
         @*@using (Html.BeginForm("FormAgendamento", "Agendamento", FormMethod.Post))
         {
@@ -66,13 +66,29 @@
             </div><button type="submit" class="btn-agendar">Agendar</button>
         }*@
 
-            @*<h1>@ViewBag.HorarioMarcado.nome_usu</h1>
-            <h3>@ViewBag.HorarioMarcado.servico</h3>
-            <h3>@ViewBag.HorarioMarcado.email_usu</h3>
-            <h3>@ViewBag.HorarioMarcado.tel_usu</h3>
-            <h3>@ViewBag.HorarioMarcado.preco</h3>
-            <h3>@ViewBag.HorarioMarcado.horas</h3>
-            <h3>@ViewBag.HorarioMarcado.data</h3>*@
+        @foreach (var horario in ViewBag.HorarioMarcado)
+        {
+            <h1>@horario.cod_agendamento</h1>
+            <h1>@horario.nome_usu</h1>
+            <h1>@horario.servico</h1>
+            <h1>@horario.email_usu</h1>
+            <h1>@horario.tel_usu</h1>
+            <h1>@horario.preco</h1>
+            <h1>@horario.horas</h1>
+            <h1>@horario.data</h1>
+
+            @Html.ActionLink("Excluir horário", "AdminDeletar", "Admin", new {idAgendamento = horario.cod_agendamento}, null)
+        }
+
+        @*<h1>@ViewBag.IdAgendamento</h1>
+        <h1>@ViewBag.HorarioMarcado.nome_usu</h1>
+        <h3>@ViewBag.HorarioMarcado.servico</h3>
+        <h3>@ViewBag.HorarioMarcado.email_usu</h3>
+        <h3>@ViewBag.HorarioMarcado.tel_usu</h3>
+        <h3>@ViewBag.HorarioMarcado.preco</h3>
+        <h3>@ViewBag.HorarioMarcado.horas</h3>
+        <h3>@ViewBag.HorarioMarcado.data</h3>*@
+
 
 
 

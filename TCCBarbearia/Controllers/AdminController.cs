@@ -30,6 +30,7 @@ namespace TCCBarbearia.Controllers
             {
                 List<Agendamento> horariosList = pegarHorarios.PegarTodosHorarios();
                 ViewBag.HorariosList = horariosList;
+               
                 return View();
             }
         }
@@ -38,22 +39,18 @@ namespace TCCBarbearia.Controllers
         {
             List<Agendamento> horarioPorID = pegarHorarios.PegarHorariosPorId(idAgendamento);
             ViewBag.HorarioMarcado = horarioPorID;
+           
             return View(idAgendamento);
         }
-/*        [HttpGet]
-        public ActionResult AdminDeletar(Agendamento Ag)
-        {
-            Session["codAg"] = Ag.cod_agendamento.ToString();
 
+        public ActionResult AdminDeletar(int idAgendamento)
+        {
+            DH.Deletar(idAgendamento);
             return View();
         }
-        [HttpPost]
-        public ActionResult AdminDeletar(int Id)
-        {
-            DH.Deletar(Id);
-            return RedirectToAction("Index", "Home");
-        }
-*/
+
+      
+
         public ActionResult AdminClientesCadastrados()
         {
             List<Usuario> usuariosCadastrados = pegarHorarios.ListarClientesCadastrados();
