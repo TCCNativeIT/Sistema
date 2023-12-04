@@ -12,86 +12,64 @@
     <title>AdminDetalhesCorte</title>
 </head>
 <body>
-    <div>
+    <div class="detalhes-agendamento">
 
 
 
-        @*@using (Html.BeginForm("FormAgendamento", "Agendamento", FormMethod.Post))
-        {
 
-            <div>
-                <label for="">Nome:</label>
-                <input type="text" value="@Session["nomeLogado"]" readonly />
-            </div>
-
-            <div>
-                <label for="">Email:</label>
-                <input type="text" value="@Session["emailLogado"]" readonly name="" id="">
-            </div>
-
-            <div>
-                <label for="">Escolha um serviço:</label>
-                <div class="div-radios">
-
-                    <div>
-                        <label>
-                            @Html.RadioButtonFor(m => m.servico, "CorteCabelo")
-                            Corte de Cabelo
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            @Html.RadioButtonFor(m => m.servico, "Barba")
-                            Barba
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            @Html.RadioButtonFor(m => m.servico, "CorteEBarba")
-                            Corte e Barba
-                        </label>
-                    </div>
-
-                </div>
-            </div>
-
-            <div>
-                <label for="">Data:</label>
-                @Html.LabelFor(model => model.data, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.EditorFor(model => model.data, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-            <div>
-                <label for="">Horário:</label>
-                @Html.EditorFor(model => model.horas, new { htmlAttributes = new { @class = "form-control" } })
-            </div><button type="submit" class="btn-agendar">Agendar</button>
-        }*@
 
         @foreach (var horario in ViewBag.HorarioMarcado)
         {
-            <h1>@horario.cod_agendamento</h1>
-            <h1>@horario.nome_usu</h1>
-            <h1>@horario.servico</h1>
-            <h1>@horario.email_usu</h1>
-            <h1>@horario.tel_usu</h1>
-            <h1>@horario.preco</h1>
-            <h1>@horario.horas</h1>
-            <h1>@horario.data</h1>
+            <form class="form-detalhes-agendamento">
 
-            @Html.ActionLink("Excluir horário", "AdminDeletar", "Admin", new {idAgendamento = horario.cod_agendamento}, null)
+                <div>
+                    <label>Cliente</label>
+                    <input type="text" value="@horario.nome_usu" readonly />
+                </div>
+
+                <div>
+                    <label>Serviço</label>
+                    <input type="text" value="@horario.servico" readonly/>
+                </div>
+
+                <div>
+                    <label>Telefone</label>
+                    <input type="text" value="@horario.tel_usu" readonly/>
+                </div>
+
+                <div>
+                    <label>Preço</label>
+                    <input type="text" value="@horario.preco" readonly/>
+                </div>
+
+
+                <div>
+                    <label>Data marcada</label>
+                    <input type="text" value="@horario.data" readonly/>
+                </div>
+
+                <div>
+                    <label>Horário</label>
+                    <input type="text" value="@horario.horas" readonly/>
+                </div>
+
+
+            </form>
+
+            <div class="btn-excluir-agendamento">
+                @*<a onclick="openModalExcluir()">Excluir</a>*@
+                 @Html.ActionLink("Excluir horário", "AdminDeletar", "Admin", new { idAgendamento = horario.cod_agendamento, @class = "btn-excluir-agendamento" }, null)
+            </div>
         }
 
-        @*<h1>@ViewBag.IdAgendamento</h1>
-        <h1>@ViewBag.HorarioMarcado.nome_usu</h1>
-        <h3>@ViewBag.HorarioMarcado.servico</h3>
-        <h3>@ViewBag.HorarioMarcado.email_usu</h3>
-        <h3>@ViewBag.HorarioMarcado.tel_usu</h3>
-        <h3>@ViewBag.HorarioMarcado.preco</h3>
-        <h3>@ViewBag.HorarioMarcado.horas</h3>
-        <h3>@ViewBag.HorarioMarcado.data</h3>*@
+
 
 
 
 
     </div>
 </body>
+
+    <script src="~/Scripts/ModalExcluirAgendamento.js"></script>
+
 </html>

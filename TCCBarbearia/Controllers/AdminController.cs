@@ -46,7 +46,7 @@ namespace TCCBarbearia.Controllers
         public ActionResult AdminDeletar(int idAgendamento)
         {
             DH.Deletar(idAgendamento);
-            return View();
+            return RedirectToAction("AdminHome", "Admin");
         }
 
       

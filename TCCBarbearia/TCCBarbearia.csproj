@@ -180,7 +180,7 @@
     <Content Include="imgs\bigodebranco.png" />
     <Content Include="imgs\imgFormAgendamento.jpg" />
     <Content Include="imgs\sobre-nos.jpg" />
-    <Content Include="Scripts\AdminHomeStyles - Cópia.css" />
+    <Content Include="Scripts\AdminHomeStyles - Cópia - Cópia .css" />
     <Content Include="Scripts\AgendamentosContaStyle.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -193,6 +193,8 @@
     <Content Include="Scripts\FormAgendamentoStyle.css" />
     <Content Include="Scripts\Hamburguer - Cópia .css" />
     <Content Include="Scripts\HomePageCss.css" />
+    <Content Include="Scripts\ModalExcluirAgendamento.js" />
+    <Content Include="Scripts\ModalExcluir.css" />
     <Content Include="Scripts\ModalSair.css" />
     <Content Include="Scripts\ModalSairScript.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -235,7 +237,6 @@
     <Content Include="Views\Cliente\AgendamentosConta.cshtml" />
     <Content Include="Views\Cliente\Conta.cshtml" />
     <Content Include="Views\Cliente\Alterado.cshtml" />
-    <Content Include="Views\Admin\AdminDeletar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -190,3 +190,51 @@ table thead tr th {
         margin-left: 0px;
     }
 }
+
+
+
+
+        /*DETALHES AGENDAMENTOS FORM*/
+
+
+.detalhes-agendamento {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-detalhes-agendamento{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:700px;
+}
+
+.form-detalhes-agendamento div {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.form-detalhes-agendamento div input {
+    padding: 15px 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.486);
+}
+
+.btn-excluir-agendamento{
+    margin-top:25px;
+}
+
+.btn-excluir-agendamento a {
+    text-decoration: none;
+    padding: 15px 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor:pointer;
+}
