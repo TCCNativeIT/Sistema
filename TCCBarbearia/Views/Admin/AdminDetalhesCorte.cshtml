@@ -22,6 +22,10 @@
         {
             <form class="form-detalhes-agendamento">
 
+                <h1>
+                    <b>Agendamento #@horario.cod_agendamento</b>
+                </h1>
+
                 <div>
                     <label>Cliente</label>
                     <input type="text" value="@horario.nome_usu" readonly />
@@ -29,28 +33,33 @@
 
                 <div>
                     <label>Serviço</label>
-                    <input type="text" value="@horario.servico" readonly/>
+                    <input type="text" value="@horario.servico" readonly />
+                </div>
+
+                <div>
+                    <label>Email</label>
+                    <input type="text" value="@horario.email_usu" readonly />
                 </div>
 
                 <div>
                     <label>Telefone</label>
-                    <input type="text" value="@horario.tel_usu" readonly/>
+                    <input type="text" value="@horario.tel_usu" readonly />
                 </div>
 
                 <div>
                     <label>Preço</label>
-                    <input type="text" value="@horario.preco" readonly/>
+                    <input type="text" value="@horario.preco" readonly />
                 </div>
 
 
                 <div>
                     <label>Data marcada</label>
-                    <input type="text" value="@horario.data" readonly/>
+                    <input type="text" value="@horario.data" readonly />
                 </div>
 
                 <div>
                     <label>Horário</label>
-                    <input type="text" value="@horario.horas" readonly/>
+                    <input type="text" value="@horario.horas" readonly />
                 </div>
 
 

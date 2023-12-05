@@ -20,31 +20,42 @@
 
             <div class="card-agendamento">
 
-                <div class="card-nome-servico">
-                    <h1>@horario.nome_usu</h1>
-                    <h3>@horario.servico</h3>
+               
 
+            <form class="form-detalhes-agendamento">
+
+
+                <div>
+                    <label>Serviço</label>
+                    <input type="text" value="@horario.servico" readonly />
                 </div>
 
-                <div class="card-detalhes">
-
-
-
-                    @Html.ActionLink("Detalhes", "AdminDetalhesCorte", "Admin", new { idAgendamento = horario.cod_agendamento, @class = "card-button-detalhes" }, null)
-
-
-                    <div class="horario-preco">
-
-                        <h3>R$@horario.preco</h3>
-                        <h3>@horario.horas</h3>
-
-                    </div>
-
-
-
+                <div>
+                    <label>Preço</label>
+                    <input type="text" value="@horario.preco" readonly />
                 </div>
+
+
+                <div>
+                    <label>Data marcada</label>
+                    <input type="text" value="@horario.data" readonly />
+                </div>
+
+                <div>
+                    <label>Horário</label>
+                    <input type="text" value="@horario.horas" readonly />
+                </div>
+
+
+            </form>
+
+            <div class="btn-excluir-agendamento">
+               
+                @Html.ActionLink("Detalhes", "AdminDetalhesCorte", "Admin", new { idAgendamento = horario.cod_agendamento, @class = "card-button-detalhes" }, null)
+            </div>
 
             </div>
+
 
         }
     }

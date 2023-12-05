@@ -114,40 +114,33 @@ body {
     border-radius: 7px;
     background-color: rgba(122, 122, 122, 0.082);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     gap: 30px;
 }
 
-.card-detalhes {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.card-agendamento .card-nome-servico {
+.card-agendamento form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    gap: 15px;
+    max-width: 700px;
 }
-
-card-detalhes .horario-preco {
+.card-agendamento form div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
 }
 
-.card-button-detalhes {
-    color:white;
+.card-agendamento form div input {
+    background-color:transparent;
+    padding: 15px 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.486);
 }
-
-.preco {
-    font-weight: bolder;
-}
-
 
 /*TABELA USUÁRIOS*/
 
