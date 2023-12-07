@@ -33,12 +33,13 @@ namespace TCCBarbearia.Acoes
                     horariosMarcados.cod_usu = Convert.ToString(leitor["cod_usu"]);
                     horariosMarcados.nome_usu = Convert.ToString(leitor["nome_usu"]);
                     horariosMarcados.servico = Convert.ToString(leitor["servico"]);
-                    horariosMarcados.horas = Convert.ToString(leitor["horarios"]);
-                    horariosMarcados.data = Convert.ToDateTime(leitor["data_usu"]);
+                    horariosMarcados.data = Convert.ToString(leitor["data_usu"]);
                     horariosMarcados.preco = Convert.ToInt32(leitor["preco"]);
                     horariosMarcados.cod_agendamento = Convert.ToInt32(leitor["cod_agendamento"]);
                     horariosMarcados.email_usu = Convert.ToString(leitor["email_usu"]);
                     horariosMarcados.tel_usu = Convert.ToString(leitor["tel_usu"]);
+                    horariosMarcados.cod_horas = Convert.ToString(leitor["cod_horas"]);
+                    horariosMarcados.horas = Convert.ToString(leitor["horarios"]);
 
                     horariosMarcadosList.Add(horariosMarcados);
                 }
@@ -53,7 +54,7 @@ namespace TCCBarbearia.Acoes
         {
             List<Agendamento> horariosMarcadosList = new List<Agendamento>();
 
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbl_Agendamento where cod_agendamento = @idAgendamento ", conn.ConectarBD());
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbl_Agendamento INNER JOIN tbl_Horas ON tbl_Agendamento.cod_Horas = tbl_Horas.cod_Horas where cod_agendamento = @idAgendamento", conn.ConectarBD());
             cmd.Parameters.Add("@idAgendamento", MySqlDbType.Int32).Value = idAgendamento;
 
             MySqlDataReader leitor;
@@ -68,12 +69,12 @@ namespace TCCBarbearia.Acoes
 
                     horariosMarcados.nome_usu = Convert.ToString(leitor["nome_usu"]);
                     horariosMarcados.servico = Convert.ToString(leitor["servico"]);
-                    horariosMarcados.data = Convert.ToDateTime(leitor["data_usu"]);
+                    horariosMarcados.data = Convert.ToString(leitor["data_usu"]);
                     horariosMarcados.preco = Convert.ToInt32(leitor["preco"]);
                     horariosMarcados.cod_agendamento = Convert.ToInt32(leitor["cod_agendamento"]);
                     horariosMarcados.email_usu = Convert.ToString(leitor["email_usu"]);
                     horariosMarcados.tel_usu = Convert.ToString(leitor["tel_usu"]);
-                    horariosMarcados.horas = Convert.ToString(leitor["horas"]);
+                    horariosMarcados.horas = Convert.ToString(leitor["horarios"]);
 
                     horariosMarcadosList.Add(horariosMarcados);
                 }

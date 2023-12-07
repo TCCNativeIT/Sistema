@@ -91,7 +91,6 @@ namespace TCCBarbearia.Controllers
         [HttpPost]
         public ActionResult Conta(Usuario usu, int Id)
         {
-            Session["telLogado"] = usu.tel_usu.ToString();
             UpC.AlteraCliente(usu,Id);
             return View();
         }

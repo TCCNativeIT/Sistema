@@ -12,13 +12,12 @@ email_usu VARCHAR(50) UNIQUE NOT NULL
 
 CREATE TABLE tbl_Agendamento(
 cod_agendamento INT PRIMARY KEY AUTO_INCREMENT,
-servico VARCHAR(20) NOT NULL,
-preco int NOT NULL,
-data_usu DATETIME NOT NULL,
-nome_usu VARCHAR(50) NOT NULL,
-email_usu VARCHAR(50) NOT NULL,
-tel_usu VARCHAR(11) NOT NULL,
-horas VARCHAR(20),
+servico VARCHAR(20),
+preco int,
+data_usu VARCHAR(20),
+nome_usu VARCHAR(50),
+email_usu VARCHAR(50),
+tel_usu VARCHAR(11),
 cod_usu INT,
 cod_horas INT,
 FOREIGN KEY (cod_horas) REFERENCES Tbl_Horas(cod_horas)
@@ -32,10 +31,12 @@ horarios VARCHAR(20) NOT NULL
 
 drop table tbl_Agendamento;
 
-INSERT INTO Tbl_Horas(horarios)
-VALUES('Quatro horas (16h00)');
+SELECT * FROM tbl_Agendamento INNER JOIN tbl_Horas ON tbl_Agendamento.cod_Horas = tbl_Horas.cod_Horas;
 
-SELECT * FROM tbl_Agendamento;
+INSERT INTO Tbl_Horas(horarios)
+VALUES('16h00');
+
+SELECT * FROM tbl_Login;
 
 INSERT INTO tbl_Agendamento(cod_agendamento, servico, preco, nome_usu, email_usu, tel_usu, cod_usu)
 VALUES(6, "Corte Cabelo", 35, "Guilherme Sella Fernandes", "guilherme@sella.com", "11959848463", 18 );

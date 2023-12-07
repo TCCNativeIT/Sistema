@@ -64,7 +64,7 @@ namespace TCCBarbearia.Controllers
             
             AgC.InsereAgenda(Ag);
             
-            return RedirectToAction(nameof(Concluido));
+            return RedirectToAction("Index", "Home");
         }
         public ActionResult GetHorariosDropDown()
         {

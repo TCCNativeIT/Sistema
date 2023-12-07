@@ -228,7 +228,6 @@
     <Content Include="Views\Agendamento\FormAgendamento.cshtml" />
     <Content Include="Views\Shared\_LayoutFormAgendamento.cshtml" />
     <Content Include="Views\Cliente\Teste.cshtml" />
-    <Content Include="Views\Agendamento\Concluido.cshtml" />
     <Content Include="Views\Admin\AdminHome.cshtml" />
     <Content Include="Views\Admin\AdminDetalhesCorte.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />

@@ -13,10 +13,10 @@ namespace TCCBarbearia.Models
         public int cod_agendamento {  get; set; }
         public string servico { get; set; }
         public int preco { get; set; }
-
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime? data { get; set; }
+/*
+        [DataType(DataType.Date)]*/
+/*        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+*/        public string data { get; set; }
         public string horas { get; set; }
         public string nome_usu { get; set; }
         public string cod_usu { get; set; }

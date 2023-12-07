@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI;
+using System;
 using System.Reflection;
 using TCCBarbearia.Db;
 using TCCBarbearia.Models;
@@ -17,7 +18,7 @@ namespace TCCBarbearia.Acoes
 
             cmd.Parameters.Add("@servico", MySqlDbType.VarChar).Value = Ag.servico;
 
-            if (Ag.servico == "CorteCabelo")
+            if (Ag.servico == "Corte Cabelo")
             {
                 Ag.preco = 35;
             }
@@ -25,17 +26,17 @@ namespace TCCBarbearia.Acoes
             {
                 Ag.preco = 30;
             }
-            else if (Ag.servico == "CorteEBarba")
+            else if (Ag.servico == "Corte e Barba")
             {
                 Ag.preco = 65;
             }
 
             cmd.Parameters.Add("@preco", MySqlDbType.VarChar).Value = Ag.preco;
 
-
+            
 
                 
-            cmd.Parameters.Add("@data_usu", MySqlDbType.DateTime).Value = Ag.data;
+            cmd.Parameters.Add("@data_usu", MySqlDbType.VarChar).Value = Ag.data;
             cmd.Parameters.Add("@nome_usu", MySqlDbType.VarChar).Value = Ag.nome_usu;
             cmd.Parameters.Add("@cod_usu", MySqlDbType.Int32).Value = Ag.cod_usu;
             cmd.Parameters.Add("@email_usu", MySqlDbType.VarChar).Value = Ag.email_usu;

@@ -19,58 +19,59 @@
             <h1>Agendamento</h1>
         </div>
 
-@using (Html.BeginForm("FormAgendamento", "Agendamento", FormMethod.Post))
-{
+        @using (Html.BeginForm("FormAgendamento", "Agendamento", FormMethod.Post))
+        {
 
             <div>
                 <label for="">Nome:</label>
                 <input type="text" value="@Session["nomeLogado"]" readonly />
             </div>
 
-        <div>
-            <label for="">Email:</label>
-            <input type="text" value="@Session["emailLogado"]" readonly name="" id="">
-        </div>
-
-        <div>
-            <label for="">Escolha um serviço:</label>
-            <div class="div-radios">
-
-                <div>
-                    <label>
-                        @Html.RadioButtonFor(m => m.servico, "CorteCabelo")
-                        Corte de Cabelo
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        @Html.RadioButtonFor(m => m.servico, "Barba")
-                        Barba
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        @Html.RadioButtonFor(m => m.servico, "CorteEBarba")
-                        Corte e Barba
-                    </label>
-                </div>
-
+            <div>
+                <label for="">Email:</label>
+                <input type="text" value="@Session["emailLogado"]" readonly name="" id="">
             </div>
-        </div>
 
-        <div>
-            <label for="">Data:</label>
-            @Html.LabelFor(model => model.data, htmlAttributes: new { @class = "control-label col-md-2" })
-            @Html.EditorFor(model => model.data, new { htmlAttributes = new { @class = "form-control" } })
-        </div>
-        <div>
-            <label for="">Horário:</label>
-            @* @Html.EditorFor(model => model.horas, new { htmlAttributes = new { @class = "form-control" } })
-            *@
-            @Html.DropDownList("Horas", "Escolha o horário")
+            <div>
+                <label for="">Escolha um serviço:</label>
+                <div class="div-radios">
 
-        </div><button type="submit" class="btn-agendar">Agendar</button> 
-}
+                    <div>
+                        <label>
+                            @Html.RadioButtonFor(m => m.servico, "CorteCabelo")
+                            Corte de Cabelo
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            @Html.RadioButtonFor(m => m.servico, "Barba")
+                            Barba
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            @Html.RadioButtonFor(m => m.servico, "CorteEBarba")
+                            Corte e Barba
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <label for="">Data:</label>
+                @Html.LabelFor(model => model.data, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.data, new { htmlAttributes = new { @type = "date", @class = "form-control" } })
+            </div>
+            <div>
+                <label for="">Horário:</label>
+                @* @Html.EditorFor(model => model.horas, new { htmlAttributes = new { @class = "form-control" } })
+                *@
+                @Html.DropDownList("Horas", "Escolha o horário")
+
+            </div><button onclick="concluirModal()" type="submit" class="btn-agendar">Agendar</button>
+            <p style="text-align:center">Voltar para o @Html.ActionLink("Menu", "Index", "Home") </p>
+        }
 
     </main>
 
@@ -81,6 +82,13 @@
     </figure>
 
 </body>
+
+    <script>
+        function concluirModal() {
+            window.alert("Agendamento concluído!")
+            location.href = "/"
+        }
+    </script>
     
 </html>
 

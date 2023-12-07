@@ -35,8 +35,8 @@
 
                     <h2>@horarioMarcado.servico</h2>
                     <div class="agendamento-info">
-                        <p>@*@horarioMarcado.data*@04/12</p>
-                        <p>@*@horarioMarcado.horas*@16:00</p>
+                        <p>@horarioMarcado.data</p>
+                        <p>@horarioMarcado.horas</p>
                         <p><b>R$@horarioMarcado.preco,00</b></p>
                     </div>
 
@@ -52,7 +52,9 @@
         </div>
 
     }
-            @Html.ActionLink("Agendar agora", "FormAgendamento", "Agendamento", null, new { @class = "agendar-button" })
+    @Html.ActionLink("Agendar agora", "FormAgendamento", "Agendamento", null, new { @class = "agendar-button" })
+    <p style="text-align:center">Voltar para o @Html.ActionLink("Menu", "Index", "Home") </p>
+
 
 </body>
 </html>
